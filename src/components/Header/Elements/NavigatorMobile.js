@@ -50,7 +50,49 @@ export default function Navigator() {
           </li>
         );
       }
-      if (item.title === "Shop") {
+      if (item.title === "版位") {
+        return (
+          <li className="relative" key={index}>
+            <Link href="#">
+              <a
+                onClick={() => {
+                  if (dropdownItem === "版位") {
+                    setDropdownItem("");
+                    return;
+                  }
+                  setDropdownItem("版位");
+                }}
+              >
+                {item.title}
+                <span className="dropable-icon">
+                  <i
+                    className={`fas ${
+                      dropdownItem === "home" ? "fa-angle-up" : "fa-angle-down"
+                    }`}
+                  ></i>
+                </span>
+              </a>
+            </Link>
+            <CSSTransition
+              in={dropdownItem === "版位"}
+              unmountOnExit
+              timeout={200}
+              classNames="dropdown-menu-mobile"
+            >
+              <ul className="dropdown-menu">
+                {item.subMenu.map((i, index) => (
+                  <li key={index}>
+                    <Link href={`${process.env.PUBLIC_URL}${i.to}`}>
+                      <a>{i.title}</a>
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </CSSTransition>
+          </li>
+        );
+      }
+      if (item.title === "商店") {
         return (
           <li key={index}>
             <Link href="#">

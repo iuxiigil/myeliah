@@ -18,4 +18,13 @@ export const shop = {
     { name: "High to Low Price Sorting", value: "highToLow" },
   ],
   DEFAULT_VIEW: "grid",
+  DNDCATEGORY: [
+    "全部",
+    "大輪播",
+    "公司介紹",
+    "產品輪播",
+    "產品見證",
+    "團隊",
+    "CTA",
+  ],
 };

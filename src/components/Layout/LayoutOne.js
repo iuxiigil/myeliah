@@ -11,7 +11,7 @@ export default function LayoutOne(props) {
   return (
     <>
       <Head>
-        <title>{props.title || "Eliah | React"}</title>
+        <title>{props.title || "水璉沙-美姿 | React"}</title>
       </Head>
       <ScrollFixedHeader container={props.container} />
       {props.children}

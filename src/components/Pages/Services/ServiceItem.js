@@ -15,6 +15,7 @@ export default function ServiceItem(props) {
       parallax2.disable();
     };
   }, []);
+
   const renderListStyle = (content) => {
     if (reverse) {
       return (
