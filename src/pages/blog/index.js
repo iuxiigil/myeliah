@@ -9,6 +9,7 @@ import blogData from "../../data/blog/blog.json";
 import { Breadcrumb, BreadcrumbItem } from "../../components/Other/Breadcrumb";
 import { getPostByKeyword } from "../../common/postSelect";
 import BlogContent from "../../components/Blog/BlogContent";
+import { myseo } from "../../data/SEO/blog";
 
 export default function index() {
   const router = useRouter();
@@ -26,7 +27,7 @@ export default function index() {
   }, [offset, search]);
 
   return (
-    <LayoutFour title="Blog">
+    <LayoutFour myseo={myseo}>
       <Breadcrumb title="Blog">
         <BreadcrumbItem name="Home" />
         <BreadcrumbItem name="Blog" current />

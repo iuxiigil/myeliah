@@ -5,12 +5,13 @@ import InstagramTwo from "../../components/Sections/Instagram/InstagramTwo";
 import { Breadcrumb, BreadcrumbItem } from "../../components/Other/Breadcrumb";
 import ContactInfoItem from "../../components/Pages/Contact/ContactInfoItem";
 import contactData from "../../data/pages/contact.json";
+import { myseo } from "../../data/SEO/contact";
 
 export default function () {
   const { register, handleSubmit, watch, errors } = useForm();
   const onSubmit = (data) => console.log(data);
   return (
-    <LayoutFour title="Contact us">
+    <LayoutFour myseo={myseo}>
       <Breadcrumb title="Contact us">
         <BreadcrumbItem name="Home" />
         <BreadcrumbItem name="Contact us" current />

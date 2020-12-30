@@ -15,14 +15,13 @@ export default function () {
             <div className="col-12 col-md-7">
               <div className="error-404__content">
                 <h2>Oops!</h2>
-                <h5>404 PAGE NOT FOUND</h5>
+                <h5>404 找不到網頁</h5>
                 <p>
-                  This page couldn't be found! Back to home page if you like.
-                  Please use search for help!
+                  你要到訪的網頁不存在，請確認網址使否正確？或是重新回到首頁
                 </p>
                 <div className="form-wrapper">
                   <form>
-                    <input type="text" placeholder="Enter keyword" />
+                    {/* <input type="text" placeholder="Enter keyword" /> */}
                     <button className="btn -transparent">
                       <i className="fal fa-search"></i>
                     </button>
@@ -31,7 +30,7 @@ export default function () {
                     action={process.env.PUBLIC_URL + "/homepages/homepage1"}
                     className="-underline"
                     color="transparent"
-                    content="Back to homepage"
+                    content="返回首頁"
                   />
                 </div>
               </div>

@@ -6,14 +6,28 @@ import { getPostBySlug } from "../../../common/postSelect";
 import BlogSidebar from "../../../components/Blog/BlogSidebar";
 import PostContent from "../../../components/Blog/PostContent";
 import InstagramTwo from "../../../components/Sections/Instagram/InstagramTwo";
-
+import { myseo } from "../../../data/SEO/blogSlug";
 export default function () {
   const router = useRouter();
   const { slug } = router.query;
   const foundPost = getPostBySlug(data, slug);
+  console.log(foundPost);
+  const myseo1 = {
+    title: foundPost.title,
+    description: foundPost.description,
+    keyword: foundPost.category,
+    openGraph: {
+      type: myseo.openGraph.type,
+      url: myseo.openGraph.url,
+      title: foundPost.title,
+      description: foundPost.description,
+      image: foundPost.coverImage,
+    },
+  };
+
   return (
     foundPost !== null && (
-      <LayoutFour tilte={foundPost.title}>
+      <LayoutFour myseo={myseo1}>
         <div className="post">
           <div className="post__cover">
             <img src={foundPost.coverImage} alt={foundPost.title} />

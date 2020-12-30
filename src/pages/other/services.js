@@ -4,10 +4,11 @@ import CTAOne from "../../components/Sections/CallToAction/CTAOne";
 import ServiceItem from "../../components/Pages/Services/ServiceItem";
 import { formatSingleNumber } from "../../common/utils";
 import servicesData from "../../data/pages/services.json";
+import { myseo } from "../../data/SEO/service";
 
 export default function services() {
   return (
-    <LayoutFour title="Services">
+    <LayoutFour myseo={myseo}>
       <Breadcrumb title="Services">
         <BreadcrumbItem name="Home" />
         <BreadcrumbItem name="Services" current />
