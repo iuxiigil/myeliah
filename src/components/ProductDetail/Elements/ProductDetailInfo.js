@@ -70,9 +70,9 @@ export default function ProductDetailInfo({ data, onReviewSubmit, hideTab }) {
           <li>
             Availability:
             {data.quantity > 0 ? (
-              <span className="in-stock"> In Stock</span>
+              <span className="in-stock"> 有庫存</span>
             ) : (
-              <span className="out-stock"> Out Stock</span>
+              <span className="out-stock"> 售完</span>
             )}
           </li>
         </ul>

@@ -32,7 +32,7 @@ function Product({ data, type, className }) {
     : null;
   function renderType() {
     if (data.new) {
-      return <h5 className="-new">New</h5>;
+      return <h5 className="-new">新品</h5>;
     }
     if (data.discount && typeof data.discount === "number") {
       return <h5 className="-sale">-{percentDiscount}%</h5>;
@@ -100,7 +100,7 @@ function Product({ data, type, className }) {
                 ></Button>
               </div>
               <ReactTooltip id="cartIcon" type="dark" effect="solid">
-                <span>Add to Cart</span>
+                <span>加入購物車</span>
               </ReactTooltip>
               <div className="product-btn" data-tip data-for="qvIcon">
                 <Button
@@ -117,7 +117,7 @@ function Product({ data, type, className }) {
                 ></Button>
               </div>
               <ReactTooltip id="qvIcon" type="dark" effect="solid">
-                <span>Quick view</span>
+                <span>快速瀏覽</span>
               </ReactTooltip>
               <div className="product-btn" data-tip data-for="wlIcon">
                 <Button
@@ -133,7 +133,7 @@ function Product({ data, type, className }) {
                 ></Button>
               </div>
               <ReactTooltip id="wlIcon" type="dark" effect="solid">
-                <span>Add to Wishlist</span>
+                <span>加入常購清單</span>
               </ReactTooltip>
             </div>
           </div>
@@ -274,7 +274,7 @@ function Product({ data, type, className }) {
                   ></Button>
                 </div>
                 <ReactTooltip id="l-qvIcon" type="dark" effect="solid">
-                  <span>Quick view</span>
+                  <span>快速瀏覽</span>
                 </ReactTooltip>
                 <div
                   className="product-btn"
@@ -295,7 +295,7 @@ function Product({ data, type, className }) {
                   ></Button>
                 </div>
                 <ReactTooltip id="l-wlIcon" type="dark" effect="solid">
-                  <span>Add to Wishlist</span>
+                  <span>加入常購清單</span>
                 </ReactTooltip>
               </div>
             </div>

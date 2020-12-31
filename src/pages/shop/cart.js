@@ -48,18 +48,18 @@ export default function () {
     <LayoutFour myseo={myseo1}>
       <Breadcrumb title="Shopping cart">
         <BreadcrumbItem name="Home" />
-        <BreadcrumbItem name="Shop" />
-        <BreadcrumbItem name="Shopping cart" current />
+        <BreadcrumbItem name="商店" />
+        <BreadcrumbItem name="購物車" current />
       </Breadcrumb>
       <div className="cart">
         <div className="container">
           {!cartState || cartState.length === 0 ? (
             <div className="cart__empty">
-              <h3>No product in cart</h3>
+              <h3>空的購物車</h3>
               <Button
                 color="dark"
                 action={process.env.PUBLIC_URL + "/shop/fullwidth-4col"}
-                content="Shopping now"
+                content="購物去"
               />
             </div>
           ) : (
@@ -76,10 +76,10 @@ export default function () {
                     </colgroup>
                     <thead>
                       <tr>
-                        <th>Product</th>
-                        <th>Price</th>
-                        <th>Quantity</th>
-                        <th>Total</th>
+                        <th>商品</th>
+                        <th>單價</th>
+                        <th>數量</th>
+                        <th>小計</th>
                         <th></th>
                       </tr>
                     </thead>
@@ -141,14 +141,14 @@ export default function () {
                   <Link href={process.env.PUBLIC_URL + "/shop/fullwidth-4col"}>
                     <a>
                       <i className="fal fa-long-arrow-left"></i>
-                      Continue Shopping
+                      繼續購物
                     </a>
                   </Link>
 
                   <Link href="#">
                     <a onClick={(e) => removeAllProduct(e)}>
                       <i className="fal fa-trash"></i>
-                      Clear Shopping Cart
+                      清空購物車
                     </a>
                   </Link>
                 </div>
@@ -157,36 +157,34 @@ export default function () {
                 <div className="row">
                   <div className="col-12 col-md-8">
                     <div className="cart__total__discount">
-                      <p>Enter coupon code. It will be applied at checkout.</p>
+                      <p>優惠券.</p>
                       <div className="input-validator">
                         <form onSubmit={handleSubmit(onSubmit)}>
                           <input
                             type="text"
                             name="discountCode"
-                            placeholder="Your code here"
+                            placeholder="優惠代碼"
                             ref={register({ required: true })}
                           />
-                          <button className="btn -dark">Apply</button>
+                          <button className="btn -dark"> Check </button>
                         </form>
                         {errors.discountCode && (
-                          <span className="input-error">
-                            Please provide a discount code
-                          </span>
+                          <span className="input-error">請輸入優惠代碼</span>
                         )}
                       </div>
                     </div>
                   </div>
                   <div className="col-12 col-md-4">
                     <div className="cart__total__content">
-                      <h3>Cart Total</h3>
+                      <h3>合計</h3>
                       <table>
                         <tbody>
                           <tr>
-                            <th>Subtotal</th>
+                            <th>小計</th>
                             <td>{calculateTotalPrice(cartState, true)}</td>
                           </tr>
                           <tr>
-                            <th>Total</th>
+                            <th>總計</th>
                             <td className="final-price">
                               {calculateTotalPrice(cartState, true)}
                             </td>
@@ -198,7 +196,7 @@ export default function () {
                         width="100%"
                         action={process.env.PUBLIC_URL + "/shop/checkout"}
                         color="dark"
-                        content="Proceed to checkout"
+                        content="結帳"
                       />
                     </div>
                   </div>

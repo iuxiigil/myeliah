@@ -43,16 +43,16 @@ export default function () {
   };
   return (
     <LayoutFour myseo={myseo1}>
-      <Breadcrumb title="Wishlist">
+      <Breadcrumb title="常購清單">
         <BreadcrumbItem name="Home" />
-        <BreadcrumbItem name="Shop" />
-        <BreadcrumbItem name="Wishlist" current />
+        <BreadcrumbItem name="商店" />
+        <BreadcrumbItem name="常購清單" current />
       </Breadcrumb>
       <div className="wishlist">
         <div className="container">
           {!wishlistState || wishlistState.length === 0 ? (
             <div className="wishlist__empty">
-              <h3>No product in wishlist</h3>
+              <h3>沒有商品</h3>
             </div>
           ) : (
             <div className="wishlist__table">
@@ -66,9 +66,9 @@ export default function () {
                   </colgroup>
                   <thead>
                     <tr>
-                      <th>Product</th>
-                      <th>Unit Price</th>
-                      <th>Stock</th>
+                      <th>商品</th>
+                      <th>單價</th>
+                      <th>庫存狀態</th>
                       <th></th>
                     </tr>
                   </thead>
@@ -99,7 +99,7 @@ export default function () {
                           </div>
                         </td>
                         <td>{formatCurrency(item.price)}</td>
-                        <td>{item.quantity > 0 ? "In stock" : "Out stock"}</td>
+                        <td>{item.quantity > 0 ? "有庫存" : "售完"}</td>
                         <td>
                           <a
                             href={process.env.PUBLIC_URL + "#"}
@@ -109,8 +109,8 @@ export default function () {
                             onClick={(e) => addToCartHandle(e, item)}
                           >
                             {checkProductInCart(item.id)
-                              ? "Added to cart"
-                              : "Add to cart"}
+                              ? "已加入"
+                              : "加入購物車"}
                           </a>
                           <a
                             className="remove-btn"
