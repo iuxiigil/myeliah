@@ -8,7 +8,19 @@ import { formatCurrency } from "../../common/utils";
 import { addToCart } from "../../redux/actions/cartActions";
 import { removeFromWishlist } from "../../redux/actions/wishlistActions";
 import InstagramTwo from "../../components/Sections/Instagram/InstagramTwo";
-
+import { myseo } from "../../data/SEO/cart";
+const myseo1 = {
+  title: myseo.title,
+  description: myseo.description,
+  keyword: myseo.keyword,
+  openGraph: {
+    type: myseo.openGraph.type,
+    url: myseo.openGraph.url,
+    title: myseo.openGraph.title,
+    description: myseo.openGraph.description,
+    image: myseo.openGraph.image,
+  },
+};
 export default function () {
   const dispatch = useDispatch();
   const wishlistState = useSelector((state) => state.wishlistReducer);
@@ -30,7 +42,7 @@ export default function () {
     return toast.error("Product removed from wishlist");
   };
   return (
-    <LayoutFour title="Wishlist">
+    <LayoutFour myseo={myseo1}>
       <Breadcrumb title="Wishlist">
         <BreadcrumbItem name="Home" />
         <BreadcrumbItem name="Shop" />

@@ -8,7 +8,19 @@ import productData from "../../data/products.json";
 import ShopProducts from "../../components/Shop/ShopProducts";
 import ShopHeader from "../../components/Shop/ShopHeader";
 import InstagramTwo from "../../components/Sections/Instagram/InstagramTwo";
-
+import { myseo } from "../../data/SEO/fourCol";
+const myseo1 = {
+  title: myseo.title,
+  description: myseo.description,
+  keyword: myseo.keyword,
+  openGraph: {
+    type: myseo.openGraph.type,
+    url: myseo.openGraph.url,
+    title: myseo.openGraph.title,
+    description: myseo.openGraph.description,
+    image: myseo.openGraph.image,
+  },
+};
 export default function () {
   const pageLimit = 12;
   const [offset, setOffset] = useState(0);
@@ -21,7 +33,7 @@ export default function () {
     setCurrentData(sortedProduct.slice(offset, offset + pageLimit));
   }, [offset, currentSort]);
   return (
-    <LayoutFour title="Shop Fullwidth 4 columns" container="wide">
+    <LayoutFour myseo={myseo1} container="wide">
       <Breadcrumb title="Shop">
         <BreadcrumbItem name="Home" />
         <BreadcrumbItem name="Shop" current />

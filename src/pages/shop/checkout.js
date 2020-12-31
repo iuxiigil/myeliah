@@ -7,7 +7,19 @@ import { Breadcrumb, BreadcrumbItem } from "../../components/Other/Breadcrumb";
 import InstagramTwo from "../../components/Sections/Instagram/InstagramTwo";
 import { formatCurrency, formatSingleNumber } from "../../common/utils";
 import { calculateTotalPrice } from "../../common/shopUtils";
-
+import { myseo } from "../../data/SEO/cart";
+const myseo1 = {
+  title: myseo.title,
+  description: myseo.description,
+  keyword: myseo.keyword,
+  openGraph: {
+    type: myseo.openGraph.type,
+    url: myseo.openGraph.url,
+    title: myseo.openGraph.title,
+    description: myseo.openGraph.description,
+    image: myseo.openGraph.image,
+  },
+};
 export default function () {
   const cartState = useSelector((state) => state.cartReducer);
   const { register, handleSubmit, errors } = useForm();
@@ -19,7 +31,7 @@ export default function () {
   const onSubmit = (data) => console.log(data);
   const onCouponSubmit = (data) => console.log(data);
   return (
-    <LayoutFour title="Checkout">
+    <LayoutFour myseo={myseo1}>
       <Breadcrumb title="Checkout">
         <BreadcrumbItem name="Home" />
         <BreadcrumbItem name="Shop" />

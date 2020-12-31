@@ -10,7 +10,19 @@ import ShopProducts from "../../components/Shop/ShopProducts";
 import ShopHeader from "../../components/Shop/ShopHeader";
 import InstagramTwo from "../../components/Sections/Instagram/InstagramTwo";
 import ShopSidebar from "../../components/Shop/ShopSidebar";
-
+import { myseo } from "../../data/SEO/fourCol";
+const myseo1 = {
+  title: myseo.title,
+  description: myseo.description,
+  keyword: myseo.keyword,
+  openGraph: {
+    type: myseo.openGraph.type,
+    url: myseo.openGraph.url,
+    title: myseo.openGraph.title,
+    description: myseo.openGraph.description,
+    image: myseo.openGraph.image,
+  },
+};
 export default function () {
   const filterData = useSelector((state) => state.shopReducers.filter);
   const pageLimit = 12;
@@ -31,7 +43,7 @@ export default function () {
     setCurrentData(sortedProduct);
   }, [offset, currentSort, filterData]);
   return (
-    <LayoutFour title="Shop Fullwidth Left Sidebar" container="wide">
+    <LayoutFour myseo={myseo1} container="wide">
       <Breadcrumb title="Shop">
         <BreadcrumbItem name="Home" />
         <BreadcrumbItem name="Shop" current />
