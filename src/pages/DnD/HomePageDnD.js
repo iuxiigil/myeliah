@@ -449,36 +449,29 @@ class HomePageDnDRedux extends Component {
     );
   }
 }
+
 /**
  * ???使用Redux的方式
  * @param {*} state
  */
-const mapStateToProps = (state, ownProps) => {
-  // console.log(
-  //   state.homepageReducer.homecom.GetSource,
-  //   state.homepageReducer.homecom.GetDestination,
-  //   state.homepageReducer.aboutcom.GetSource,
-  //   state.homepageReducer.aboutcom.GetDestination,
-  //   state.homepageReducer.pageName
-  // );
-
+const mapStateToProps = (state) => {
   switch (state.homepageReducer.pageName) {
     case "Home":
       return {
-        stateDestination: state.homepageReducer.homecom.GetDestination,
-        stateSource: state.homepageReducer.homecom.GetSource,
+        stateDestination: state.homepageReducer.homeSelected,
+        stateSource: getPageItems(state.homepageReducer.pageName),
         pageName: state.homepageReducer.pageName,
       };
     case "AboutUs":
       return {
-        stateDestination: state.homepageReducer.aboutcom.GetDestination,
-        stateSource: state.homepageReducer.aboutcom.GetSource,
+        stateDestination: state.homepageReducer.aboutusSelected,
+        stateSource: getPageItems(state.homepageReducer.pageName),
         pageName: state.homepageReducer.pageName,
       };
     case "Service":
       return {
-        stateDestination: [],
-        stateSource: [],
+        stateDestination: state.homepageReducer.serviceSelected,
+        stateSource: getPageItems(state.homepageReducer.pageName),
       };
     default:
       return state;

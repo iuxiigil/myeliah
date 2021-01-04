@@ -10,6 +10,10 @@ import {
 
 const initialState = {
   pageName: "Home",
+  homeSelected: [],
+  aboutusSelected: [],
+  serviceSelected: [],
+  source: DefaultSource,
   filter: {
     category: "Home",
   },
@@ -30,6 +34,7 @@ export default function homepageReducer(state = initialState, action) {
         case "Home":
           return {
             ...state,
+            homeSelected: action.selectDestination,
             homecom: {
               ...state.homecom,
               GetDestination: action.selectDestination
@@ -43,6 +48,8 @@ export default function homepageReducer(state = initialState, action) {
         case "AboutUs":
           return {
             ...state,
+            aboutusSelected: action.selectDestination,
+
             aboutcom: {
               ...state.aboutcom,
               GetDestination: action.selectDestination
@@ -62,6 +69,8 @@ export default function homepageReducer(state = initialState, action) {
         case "Home":
           return {
             ...state,
+            serviceSelected: action.selectDestination,
+
             homecom: {
               ...state.homecom,
               GetSource: action.selectSource,
