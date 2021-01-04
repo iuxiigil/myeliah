@@ -7,8 +7,8 @@ export const getDndByCategory = (GetSource, GetDestination, category) => {
       }
     }
   }
-  if (category === "全部") return GetSource;
-  console.log(GetSource, category);
+  if (category === "Home") return GetSource;
+  // console.log(GetSource, category);
   return category
     ? GetSource.filter((p) => p.category === category)
     : GetSource;

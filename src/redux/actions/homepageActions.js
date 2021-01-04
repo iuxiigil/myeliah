@@ -1,19 +1,26 @@
 import { HOMECOMPONENTS } from "../variables";
 
-export const addHomePageComponents = (selectDestination, selectSource) => ({
+export const addHomePageComponents = (
+  selectDestination,
+  selectSource,
+  pageName
+) => ({
   type: HOMECOMPONENTS.GET_HOME_PAGE_COMPONENTS,
   selectDestination,
   selectSource,
+  pageName,
 });
 
-export const updateSourceComponents = (selectSource) => ({
+export const updateSourceComponents = (selectSource, pageName) => ({
   type: HOMECOMPONENTS.UPDATE_SOURCE_COMPONENTS,
   selectSource,
+  pageName,
 });
 
-export const updateDestinationComponents = (selectDestination) => ({
+export const updateDestinationComponents = (selectDestination, pageName) => ({
   type: HOMECOMPONENTS.UPDATE_DESTINATION_COMPONENTS,
   selectDestination,
+  pageName,
 });
 
 export const removeHomePageComponents = () => ({

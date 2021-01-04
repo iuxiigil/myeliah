@@ -7,7 +7,11 @@ import {
   DefaultSource,
 } from "../../common/componentsSets/HomepageSets";
 
-import DndSidebarOne from "../../components/DnD/dndSidebarOne";
+import {
+  AboutDestination,
+  AboutSource,
+} from "../../common/componentsSets/AboutSets";
+
 import Modal from "../../components/Control/Modal";
 import { Card, Button } from "react-bootstrap";
 import {
@@ -26,8 +30,15 @@ import styled from "styled-components";
 let SelectionDestination;
 let SelectionSource;
 let customerDestination = [];
-/** 
-  重新排序
+
+const getPageItems = (category) => {
+  return DefaultSource.filter(
+    (item) => item.category.filter((single) => single === category)[0]
+  );
+};
+
+/**
+  橫向排列css
 */
 const Container = styled.div`
   border: 1px solid #ddd;
@@ -37,6 +48,10 @@ const Container = styled.div`
   overflow-x: scroll;
   scrollbar-width: auto;
 `;
+
+/**
+  重新排序
+*/
 const reorder = (list, startIndex, endIndex) => {
   const result = Array.from(list);
   const [removed] = result.splice(startIndex, 1);
@@ -61,7 +76,7 @@ const move = (source, destination, droppableSource, droppableDestination) => {
   SelectionDestination = result.droppable2;
   SelectionSource = result.droppable;
 
-  console.log(droppableSource, droppableDestination);
+  // console.log(droppableSource, droppableDestination);
   return result;
 };
 /**
@@ -104,34 +119,36 @@ let screenView = [];
  * @param {*} item 要顯示的元件
  * @param {*} isIndependent 是否單獨顯示
  */
-
 const getCustSelect = (item, isIndependent) => {
   if (isIndependent) screenView = [];
   screenView.push(item);
-
   return screenView;
 };
 
-function removeByValue(arr, val) {
-  for (var i = 0; i < arr.length; i++) {
-    console.log(arr[i].id, val);
-    if (arr[i].id === val) {
-      arr.splice(i, 1);
-    }
-  }
-  return arr;
-}
-
+/**
+ * Components Start
+ */
 class HomePageDnDRedux extends Component {
   constructor(props) {
     super(props);
+    //reload 才會執行此設定
+    switch (this.props.pageName) {
+      case "Home":
+        SelectionDestination = this.props.stateDestination
+          ? this.props.stateDestination
+          : DefaultDestination;
+        SelectionSource = this.props.stateSource
+          ? this.props.stateSource
+          : DefaultSource;
 
-    SelectionDestination = this.props.stateDestination
-      ? this.props.stateDestination
-      : DefaultDestination;
-    SelectionSource = this.props.stateSource
-      ? this.props.stateSource
-      : DefaultSource;
+      case "AboutUs":
+        SelectionDestination = this.props.stateDestination
+          ? this.props.stateDestination
+          : AboutDestination;
+        SelectionSource = this.props.stateSource
+          ? this.props.stateSource
+          : AboutSource;
+    }
 
     /**
      * 將元件處存在 state 中
@@ -141,7 +158,14 @@ class HomePageDnDRedux extends Component {
       selected: SelectionDestination, //被選取的元件
       showModal: false, //顯示Ｍodal視窗的開關，預設為不顯示
     };
+    this.handleChange = this.handleChange.bind(this);
   }
+
+  handleChange = (sd) => (event) => {
+    this.setState({ category: event.target.value });
+    this.props.setFilterCategory(event.target.value);
+    console.log(getPageItems(event.target.value));
+  };
 
   getCustAllSelect = () => {
     screenView = SelectionDestination
@@ -158,6 +182,8 @@ class HomePageDnDRedux extends Component {
     droppable: "items",
     droppable2: "selected",
   };
+
+  // getList = (id) => this.state[this.id2List[id]];
 
   getList = (id) => this.state[this.id2List[id]];
 
@@ -187,27 +213,34 @@ class HomePageDnDRedux extends Component {
       //如果是目的貼版的話
       if (source.droppableId === "droppable2") {
         state = { selected: items };
-        this.props.updateDestinationComponents(items);
+        this.props.updateDestinationComponents(items, this.props.pageName);
       } else {
-        this.props.updateSourceComponents(items);
+        this.props.updateSourceComponents(items, this.props.pageName);
       }
-      console.log(destinal, state);
       //this.getList(source.droppableId) 回傳原先位置的貼紙順序
       //items 回傳移動後貼版的貼紙順序
-
       this.setState(state);
     } else {
       //貼版移動
+
       const result = move(
         this.getList(source.droppableId),
         this.getList(destination.droppableId),
         source,
         destination
       );
-      this.props.addHomePageComponents(result.droppable2, result.droppable);
-      console.log(result.droppable2, result.droppable);
-      // this.props.setFilterCategory("全部");
-      // getDndByCategory(DefaultSource, result.droppable2, "全部");
+      //更新Redux 的 state狀態
+      console.log(
+        result.droppable2, //目的
+        result.droppable, //來源
+        this.props.pageName
+      );
+      this.props.addHomePageComponents(
+        result.droppable2, //目的
+        result.droppable, //來源
+        this.props.pageName
+      );
+
       this.setState({
         items: result.droppable,
         selected: result.droppable2,
@@ -229,6 +262,19 @@ class HomePageDnDRedux extends Component {
               <DragDropContext onDragEnd={this.onDragEnd}>
                 <div className="row">
                   <div className="-medium">元件來源</div>
+                  <select
+                    id="lang"
+                    value={this.props.pageName}
+                    onChange={this.handleChange({
+                      s: this.props.stateSource,
+                      d: this.props.stateDestination,
+                    })}
+                  >
+                    <option value="Home">首頁</option>
+                    <option value="AboutUs">關於我們</option>
+                    <option value="Service">服務</option>
+                  </select>
+
                   <Droppable droppableId="droppable" direction="horizontal">
                     {(provided, snapshot) => (
                       <Container
@@ -281,15 +327,11 @@ class HomePageDnDRedux extends Component {
                     )}
                   </Droppable>
                 </div>
+
                 <div className="text-align: center">
                   <button
                     className="btn  -round -light-red"
                     onClick={() => {
-                      // this.props.addHomePageComponents(
-                      //   SelectionDestination,
-                      //   SelectionSource
-                      // ); //將選擇的版型寫入state
-
                       this.getCustAllSelect();
                       this.setShowQuickView(false);
                     }}
@@ -297,6 +339,7 @@ class HomePageDnDRedux extends Component {
                     預覽
                   </button>
                 </div>
+
                 <div className="row">
                   <div className="col-lg-4">
                     <div>元件目的</div>
@@ -410,22 +453,49 @@ class HomePageDnDRedux extends Component {
  * ???使用Redux的方式
  * @param {*} state
  */
-const mapStateToProps = (state) => {
-  return {
-    stateDestination: state.homepageReducer.GetDestination,
-    stateSource: state.homepageReducer.GetSource,
-  };
+const mapStateToProps = (state, ownProps) => {
+  // console.log(
+  //   state.homepageReducer.homecom.GetSource,
+  //   state.homepageReducer.homecom.GetDestination,
+  //   state.homepageReducer.aboutcom.GetSource,
+  //   state.homepageReducer.aboutcom.GetDestination,
+  //   state.homepageReducer.pageName
+  // );
+
+  switch (state.homepageReducer.pageName) {
+    case "Home":
+      return {
+        stateDestination: state.homepageReducer.homecom.GetDestination,
+        stateSource: state.homepageReducer.homecom.GetSource,
+        pageName: state.homepageReducer.pageName,
+      };
+    case "AboutUs":
+      return {
+        stateDestination: state.homepageReducer.aboutcom.GetDestination,
+        stateSource: state.homepageReducer.aboutcom.GetSource,
+        pageName: state.homepageReducer.pageName,
+      };
+    case "Service":
+      return {
+        stateDestination: [],
+        stateSource: [],
+      };
+    default:
+      return state;
+  }
 };
 
 const mapDispatchToProps = (dispatch) => ({
-  addHomePageComponents: (SelectionDestination, SelectionSource) => {
-    dispatch(addHomePageComponents(SelectionDestination, SelectionSource));
+  addHomePageComponents: (SelectionDestination, SelectionSource, pageName) => {
+    dispatch(
+      addHomePageComponents(SelectionDestination, SelectionSource, pageName)
+    );
   },
-  updateSourceComponents: (SelectionSource) => {
-    dispatch(updateSourceComponents(SelectionSource));
+  updateSourceComponents: (SelectionSource, pageName) => {
+    dispatch(updateSourceComponents(SelectionSource, pageName));
   },
-  updateDestinationComponents: (SelectionDestination) => {
-    dispatch(updateDestinationComponents(SelectionDestination));
+  updateDestinationComponents: (SelectionDestination, pageName) => {
+    dispatch(updateDestinationComponents(SelectionDestination, pageName));
   },
   setFilterCategory: (category) => {
     dispatch(setFilterCategory(category));

@@ -36,7 +36,7 @@ import teamOneData from "../../data/team/teamOne.json";
 export const DefaultDestination = [
   // {
   //   id: "1",
-  //   category: "大輪播",
+  //   category: ["大輪播",
   //   key: "1",
   //   remark: "大輪播",
   //   comName: <SliderTwo data={sliderData} className="-style-1" showDots />,
@@ -47,7 +47,7 @@ export const DefaultDestination = [
 export const DefaultSource = [
   {
     id: "1",
-    category: "大輪播",
+    category: ["Home"],
     key: "1",
     remark: "大輪播",
     comName: <SliderTwo data={sliderData} className="-style-1" showDots />,
@@ -55,7 +55,7 @@ export const DefaultSource = [
   },
   {
     id: "2",
-    category: "公司介紹",
+    category: ["Home", "AboutUs"],
     key: "2",
     remark: "公司介紹一",
     comName: <IntroductionOne data={introductionOneData} />,
@@ -63,7 +63,7 @@ export const DefaultSource = [
   },
   {
     id: "3",
-    category: "公司介紹",
+    category: ["Home"],
     key: "3",
     remark: "公司介紹二",
     comName: <IntroductionTwo data={introductionTwoData} />,
@@ -71,7 +71,7 @@ export const DefaultSource = [
   },
   {
     id: "4",
-    category: "產品輪播",
+    category: ["Home"],
     key: "4",
     remark: "產品輪播",
     comName: <ProductSlideOne data={productSlideOneData} />,
@@ -79,7 +79,7 @@ export const DefaultSource = [
   },
   {
     id: "5",
-    category: "產品見證",
+    category: ["Home", "AboutUs"],
     key: "5",
     remark: "產品見證",
     comName: <TestimonialOne data={testimonialOneData} />,
@@ -87,7 +87,7 @@ export const DefaultSource = [
   },
   {
     id: "6",
-    category: "團隊",
+    category: ["Home", "AboutUs"],
     key: "6",
     remark: "專業團隊",
     comName: <TeamOne data={teamOneData} />,
@@ -95,7 +95,7 @@ export const DefaultSource = [
   },
   {
     id: "7",
-    category: "CTA",
+    category: ["Home"],
     key: "7",
     remark: "預約服務",
     comName: <CTAOne />,
@@ -103,7 +103,7 @@ export const DefaultSource = [
   },
   {
     id: "8",
-    category: "公司介紹",
+    category: ["Home"],
     key: "8",
     remark: "公司介紹三",
     comName: <IntroductionSix data={introductionSixData} />,
@@ -111,7 +111,7 @@ export const DefaultSource = [
   },
   {
     id: "9",
-    category: "公司介紹",
+    category: ["Home", "AboutUs"],
     key: "9",
     remark: "公司介紹四",
     comName: <IntroductionSeven data={introductionSevenData} />,
@@ -119,7 +119,7 @@ export const DefaultSource = [
   },
   {
     id: "10",
-    category: "公司介紹",
+    category: ["Home"],
     key: "10",
     remark: "公司介紹五",
     comName: <IntroductionEight data={introductionEightData} />,
@@ -127,7 +127,7 @@ export const DefaultSource = [
   },
   {
     id: "11",
-    category: "公司介紹",
+    category: ["Home"],
     key: "11",
     remark: "公司介紹六",
     comName: <IntroductionTen data={introductionTenData} />,
@@ -135,7 +135,7 @@ export const DefaultSource = [
   },
   {
     id: "12",
-    category: "CTA",
+    category: ["Home"],
     key: "12",
     remark: "盡快聯絡",
     comName: <CTATwo />,
@@ -143,7 +143,7 @@ export const DefaultSource = [
   },
   {
     id: "13",
-    category: "大輪播",
+    category: ["Home", "AboutUs"],
     key: "13",
     remark: "大輪播-1",
     comName: <SliderOne data={sliderData5} className="-style-5" />,

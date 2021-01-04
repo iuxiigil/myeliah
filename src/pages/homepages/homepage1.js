@@ -13,10 +13,11 @@ let layoutScreen;
 
 export default function homepage1() {
   customerSelect = useSelector((state) =>
-    state.homepageReducer.GetDestination
-      ? state.homepageReducer.GetDestination
+    state.homepageReducer.homecom.GetDestination
+      ? state.homepageReducer.homecom.GetDestination
       : DefaultDestination
   );
+  // console.log(customerSelect);
   customerDestination = [];
   customerSelect.map((comp, _key1) => {
     DefaultSource.map((item, _key2) => {
@@ -29,7 +30,7 @@ export default function homepage1() {
   });
 
   return (
-    <LayoutOne title="美麗佳人" className="-style-1">
+    <LayoutOne title="美麗佳人-1" className="-style-1">
       {layoutScreen}
     </LayoutOne>
   );
