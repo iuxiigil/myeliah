@@ -13,8 +13,8 @@ let layoutScreen;
 
 export default function homepage1() {
   customerSelect = useSelector((state) =>
-    state.homepageReducer.homecom.GetDestination
-      ? state.homepageReducer.homecom.GetDestination
+    state.homepageReducer.homeSelected
+      ? state.homepageReducer.homeSelected
       : DefaultDestination
   );
   // console.log(customerSelect);

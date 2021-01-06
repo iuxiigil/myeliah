@@ -26,9 +26,9 @@ const myseo1 = {
 };
 
 import {
-  AboutDestination,
-  AboutSource,
-} from "../../common/componentsSets/AboutSets";
+  DefaultDestination,
+  DefaultSource,
+} from "../../common/componentsSets/HomepageSets";
 
 import { useSelector } from "react-redux";
 
@@ -38,13 +38,13 @@ let layoutScreen;
 
 export default function () {
   customerSelect = useSelector((state) =>
-    state.homepageReducer.aboutcom.GetDestination
-      ? state.homepageReducer.aboutcom.GetDestination
-      : AboutDestination
+    state.homepageReducer.aboutusSelected
+      ? state.homepageReducer.aboutusSelected
+      : DefaultSource
   );
   customerDestination = [];
   customerSelect.map((comp, _key1) => {
-    AboutSource.map((item, _key2) => {
+    DefaultSource.map((item, _key2) => {
       if (item.id === comp.id) customerDestination.push(item);
     });
   });

@@ -11,7 +11,7 @@ import {
   AboutDestination,
   AboutSource,
 } from "../../common/componentsSets/AboutSets";
-
+import Router from "next/router";
 import Modal from "../../components/Control/Modal";
 import { Card, Button } from "react-bootstrap";
 import {
@@ -31,8 +31,8 @@ let SelectionDestination;
 let SelectionSource;
 let customerDestination = [];
 
-const getPageItems = (category) => {
-  return DefaultSource.filter(
+const getPageItems = (source, category) => {
+  return source.filter(
     (item) => item.category.filter((single) => single === category)[0]
   );
 };
@@ -163,8 +163,15 @@ class HomePageDnDRedux extends Component {
 
   handleChange = (sd) => (event) => {
     this.setState({ category: event.target.value });
+
     this.props.setFilterCategory(event.target.value);
-    console.log(getPageItems(event.target.value));
+    var timeoutID = window.setTimeout(() => Router.reload(), 100);
+    this.props.addHomePageComponents(
+      sd.stateSource, //目的
+      sd.stateDestination, //來源
+      this.props.pageName
+    );
+    console.log(sd.stateSource, sd.stateDestination);
   };
 
   getCustAllSelect = () => {
@@ -209,7 +216,7 @@ class HomePageDnDRedux extends Component {
       );
 
       let state = { items };
-
+      console.log(items, destinal, this.props.pageName);
       //如果是目的貼版的話
       if (source.droppableId === "droppable2") {
         state = { selected: items };
@@ -230,11 +237,7 @@ class HomePageDnDRedux extends Component {
         destination
       );
       //更新Redux 的 state狀態
-      console.log(
-        result.droppable2, //目的
-        result.droppable, //來源
-        this.props.pageName
-      );
+
       this.props.addHomePageComponents(
         result.droppable2, //目的
         result.droppable, //來源
@@ -459,19 +462,28 @@ const mapStateToProps = (state) => {
     case "Home":
       return {
         stateDestination: state.homepageReducer.homeSelected,
-        stateSource: getPageItems(state.homepageReducer.pageName),
+        stateSource: getPageItems(
+          state.homepageReducer.homeSource,
+          state.homepageReducer.pageName
+        ),
         pageName: state.homepageReducer.pageName,
       };
     case "AboutUs":
       return {
         stateDestination: state.homepageReducer.aboutusSelected,
-        stateSource: getPageItems(state.homepageReducer.pageName),
+        stateSource: getPageItems(
+          state.homepageReducer.aboutusSource,
+          state.homepageReducer.pageName
+        ),
         pageName: state.homepageReducer.pageName,
       };
     case "Service":
       return {
         stateDestination: state.homepageReducer.serviceSelected,
-        stateSource: getPageItems(state.homepageReducer.pageName),
+        stateSource: getPageItems(
+          state.homepageReducer.serviceSource,
+          state.homepageReducer.pageName
+        ),
       };
     default:
       return state;

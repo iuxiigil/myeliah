@@ -47,7 +47,7 @@ export const DefaultDestination = [
 export const DefaultSource = [
   {
     id: "1",
-    category: ["Home"],
+    category: ["Home", "AboutUs", "Service"],
     key: "1",
     remark: "大輪播",
     comName: <SliderTwo data={sliderData} className="-style-1" showDots />,
@@ -63,7 +63,7 @@ export const DefaultSource = [
   },
   {
     id: "3",
-    category: ["Home"],
+    category: ["Home", "Service"],
     key: "3",
     remark: "公司介紹二",
     comName: <IntroductionTwo data={introductionTwoData} />,
@@ -71,7 +71,7 @@ export const DefaultSource = [
   },
   {
     id: "4",
-    category: ["Home"],
+    category: ["Home", "Service"],
     key: "4",
     remark: "產品輪播",
     comName: <ProductSlideOne data={productSlideOneData} />,
@@ -87,7 +87,7 @@ export const DefaultSource = [
   },
   {
     id: "6",
-    category: ["Home", "AboutUs"],
+    category: ["Home", "AboutUs", "Service"],
     key: "6",
     remark: "專業團隊",
     comName: <TeamOne data={teamOneData} />,
@@ -95,7 +95,7 @@ export const DefaultSource = [
   },
   {
     id: "7",
-    category: ["Home"],
+    category: ["Home", "Service"],
     key: "7",
     remark: "預約服務",
     comName: <CTAOne />,
@@ -119,7 +119,7 @@ export const DefaultSource = [
   },
   {
     id: "10",
-    category: ["Home"],
+    category: ["Home", "Service"],
     key: "10",
     remark: "公司介紹五",
     comName: <IntroductionEight data={introductionEightData} />,
@@ -135,7 +135,7 @@ export const DefaultSource = [
   },
   {
     id: "12",
-    category: ["Home"],
+    category: ["Home", "Service"],
     key: "12",
     remark: "盡快聯絡",
     comName: <CTATwo />,

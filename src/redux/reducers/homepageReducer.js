@@ -1,33 +1,28 @@
 import { HOMECOMPONENTS } from "../variables";
-import {
-  DefaultDestination,
-  DefaultSource,
-} from "../../common/componentsSets/HomepageSets";
-import {
-  AboutDestination,
-  AboutSource,
-} from "../../common/componentsSets/AboutSets";
+import { DefaultSource } from "../../common/componentsSets/HomepageSets";
 
 const initialState = {
   pageName: "Home",
   homeSelected: [],
   aboutusSelected: [],
   serviceSelected: [],
+  homeSource: DefaultSource.filter(
+    (item) => item.category.filter((single) => single === "Home")[0]
+  ),
+  aboutusSource: DefaultSource.filter(
+    (item) => item.category.filter((single) => single.includes("AboutUs"))[0]
+  ),
+  serviceSource: DefaultSource.filter(
+    (item) => item.category.filter((single) => single === "Service")[0]
+  ),
   source: DefaultSource,
   filter: {
     category: "Home",
   },
-  homecom: {
-    GetDestination: DefaultDestination,
-    GetSource: DefaultSource,
-  },
-  aboutcom: {
-    GetDestination: AboutDestination,
-    GetSource: AboutSource,
-  },
 };
 
 export default function homepageReducer(state = initialState, action) {
+  console.log(action);
   switch (action.type) {
     case HOMECOMPONENTS.GET_HOME_PAGE_COMPONENTS:
       switch (action.pageName) {
@@ -35,56 +30,40 @@ export default function homepageReducer(state = initialState, action) {
           return {
             ...state,
             homeSelected: action.selectDestination,
-            homecom: {
-              ...state.homecom,
-              GetDestination: action.selectDestination
-                ? action.selectDestination
-                : DefaultDestination,
-              GetSource: action.selectSource
-                ? action.selectSource
-                : DefaultSource,
-            },
+            homeSource: action.selectSource
+              ? action.selectSource
+              : DefaultSource,
           };
         case "AboutUs":
           return {
             ...state,
             aboutusSelected: action.selectDestination,
-
-            aboutcom: {
-              ...state.aboutcom,
-              GetDestination: action.selectDestination
-                ? action.selectDestination
-                : AboutDestination,
-              GetSource: action.selectSource
-                ? action.selectSource
-                : AboutSource,
-            },
+            aboutusSource: action.selectSource
+              ? action.selectSource
+              : DefaultSource,
           };
         default:
           return { ...state };
       }
 
     case HOMECOMPONENTS.UPDATE_SOURCE_COMPONENTS:
+      console.log(action);
       switch (action.pageName) {
         case "Home":
           return {
             ...state,
-            serviceSelected: action.selectDestination,
-
-            homecom: {
-              ...state.homecom,
-              GetSource: action.selectSource,
-              GetDestination: state.GetDestination,
-            },
+            // homeSelected: action.selectDestination,
+            homesource: action.selectSource
+              ? action.selectSource
+              : DefaultSource,
           };
         case "AboutUs":
           return {
             ...state,
-            aboutcom: {
-              ...state.aboutcom,
-              GetSource: action.selectSource,
-              GetDestination: state.GetDestination,
-            },
+            // aboutusSelected: action.selectDestination,
+            aboutusSource: action.selectSource
+              ? action.selectSource
+              : DefaultSource,
           };
         default:
           return { ...state };
@@ -94,20 +73,18 @@ export default function homepageReducer(state = initialState, action) {
         case "Home":
           return {
             ...state,
-            homecom: {
-              ...state.homecom,
-              GetDestination: action.selectDestination,
-              GetSource: state.GetSource,
-            },
+            homeSelected: action.selectDestination,
+            homesource: action.selectSource
+              ? action.selectSource
+              : DefaultSource,
           };
         case "AboutUs":
           return {
             ...state,
-            aboutcom: {
-              ...state.aboutcom,
-              GetDestination: action.selectDestination,
-              GetSource: state.GetSource,
-            },
+            aboutusSelected: action.selectDestination,
+            aboutusSource: action.selectSource
+              ? action.selectSource
+              : DefaultSource,
           };
         default:
           return { ...state };
