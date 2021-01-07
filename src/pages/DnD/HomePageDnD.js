@@ -20,8 +20,9 @@ import {
   updateDestinationComponents,
   setFilterCategory,
 } from "../../redux/actions/homepageActions";
-// import { getDndByCategory } from "../../common/DndSelect";
+
 import styled from "styled-components";
+import Select from "react-select";
 /**
  * 左右邊選取的元件
  * SelectionDestination =>選取的元件
@@ -49,6 +50,24 @@ const Container = styled.div`
   scrollbar-width: auto;
 `;
 
+const customStyles = {
+  option: (provided, state) => ({
+    ...provided,
+    borderBottom: "1px dotted pink",
+    color: state.isSelected ? "red" : "blue",
+    padding: 20,
+  }),
+  control: () => ({
+    // none of react-select's styles are passed to <Control />
+    width: 300,
+  }),
+  singleValue: (provided, state) => {
+    const opacity = state.isDisabled ? 0.5 : 1;
+    const transition = "opacity 300ms";
+
+    return { ...provided, opacity, transition };
+  },
+};
 /**
   重新排序
 */
@@ -125,6 +144,11 @@ const getCustSelect = (item, isIndependent) => {
   return screenView;
 };
 
+const options = [
+  { value: "Home", label: "首頁" },
+  { value: "AboutUs", label: "關於我們" },
+  { value: "Service", label: "服務" },
+];
 /**
  * Components Start
  */
@@ -157,21 +181,28 @@ class HomePageDnDRedux extends Component {
       items: SelectionSource, //元件來源
       selected: SelectionDestination, //被選取的元件
       showModal: false, //顯示Ｍodal視窗的開關，預設為不顯示
+      selectedOption: null,
     };
     this.handleChange = this.handleChange.bind(this);
   }
 
-  handleChange = (sd) => (event) => {
-    this.setState({ category: event.target.value });
+  handleChange = (selectedOption) => {
+    var timeoutID = window.setTimeout(() => Router.reload(), 1);
+    // Router.reload();
+    this.setState({ selectedOption });
+    this.props.setFilterCategory(selectedOption.value);
 
-    this.props.setFilterCategory(event.target.value);
-    var timeoutID = window.setTimeout(() => Router.reload(), 100);
-    this.props.addHomePageComponents(
-      sd.stateSource, //目的
-      sd.stateDestination, //來源
-      this.props.pageName
+    // this.props.addHomePageComponents(
+    //   this.props.stateDestination, //目的
+    //   this.props.stateSource, //來源
+    //   selectedOption.value
+    // );
+
+    console.log(
+      this.props.stateDestination,
+      this.props.stateSource,
+      selectedOption.value
     );
-    console.log(sd.stateSource, sd.stateDestination);
   };
 
   getCustAllSelect = () => {
@@ -216,7 +247,7 @@ class HomePageDnDRedux extends Component {
       );
 
       let state = { items };
-      console.log(items, destinal, this.props.pageName);
+
       //如果是目的貼版的話
       if (source.droppableId === "droppable2") {
         state = { selected: items };
@@ -238,6 +269,12 @@ class HomePageDnDRedux extends Component {
       );
       //更新Redux 的 state狀態
 
+      console.log(
+        result.droppable2, //目的
+        result.droppable, //來源
+        myDestination,
+        mySource
+      );
       this.props.addHomePageComponents(
         result.droppable2, //目的
         result.droppable, //來源
@@ -250,6 +287,10 @@ class HomePageDnDRedux extends Component {
       });
     }
   };
+
+  componentWillMount() {
+    console.log(this.props.stateDestination, this.props.stateSource);
+  }
 
   // Normally you would want to split things out into separate components.
   // But in this example everything is just done in one place for simplicity
@@ -265,27 +306,21 @@ class HomePageDnDRedux extends Component {
               <DragDropContext onDragEnd={this.onDragEnd}>
                 <div className="row">
                   <div className="-medium">元件來源</div>
-                  <select
-                    id="lang"
-                    value={this.props.pageName}
-                    onChange={this.handleChange({
-                      s: this.props.stateSource,
-                      d: this.props.stateDestination,
-                    })}
-                  >
-                    <option value="Home">首頁</option>
-                    <option value="AboutUs">關於我們</option>
-                    <option value="Service">服務</option>
-                  </select>
 
+                  <Select
+                    styles={customStyles}
+                    value={this.state.selectedOption}
+                    onChange={this.handleChange}
+                    options={options}
+                  />
                   <Droppable droppableId="droppable" direction="horizontal">
                     {(provided, snapshot) => (
                       <Container
                         ref={provided.innerRef}
                         style={getListStyle1(snapshot.isDraggingOver)}
                       >
-                        {this.props.stateSource &&
-                          this.props.stateSource.map((item, index) => (
+                        {mySource &&
+                          mySource.map((item, index) => (
                             <Draggable
                               key={item.id}
                               draggableId={item.id}
@@ -352,8 +387,8 @@ class HomePageDnDRedux extends Component {
                           ref={provided.innerRef}
                           style={getListStyle2(snapshot.isDraggingOver)}
                         >
-                          {this.props.stateDestination &&
-                            this.props.stateDestination.map((item, index) => (
+                          {myDestination &&
+                            myDestination.map((item, index) => (
                               <Draggable
                                 key={item.id}
                                 draggableId={item.id}
@@ -452,38 +487,40 @@ class HomePageDnDRedux extends Component {
     );
   }
 }
-
+let myDestination = [];
+let mySource = [];
 /**
  * ???使用Redux的方式
  * @param {*} state
  */
 const mapStateToProps = (state) => {
+  myDestination = [];
+  mySource = [];
   switch (state.homepageReducer.pageName) {
     case "Home":
+      console.log("Home", state.homepageReducer.homeSource);
+      myDestination = state.homepageReducer.homeSelected;
+      mySource = state.homepageReducer.homeSource;
       return {
         stateDestination: state.homepageReducer.homeSelected,
-        stateSource: getPageItems(
-          state.homepageReducer.homeSource,
-          state.homepageReducer.pageName
-        ),
+        stateSource: state.homepageReducer.homeSource,
         pageName: state.homepageReducer.pageName,
       };
     case "AboutUs":
+      console.log("AboutUs", state.homepageReducer.aboutusSource);
+      myDestination = state.homepageReducer.aboutusSelected;
+      mySource = state.homepageReducer.aboutusSource;
       return {
         stateDestination: state.homepageReducer.aboutusSelected,
-        stateSource: getPageItems(
-          state.homepageReducer.aboutusSource,
-          state.homepageReducer.pageName
-        ),
+        stateSource: state.homepageReducer.aboutusSource,
         pageName: state.homepageReducer.pageName,
       };
     case "Service":
+      myDestination = state.homepageReducer.serviceSelected;
+      mySource = state.homepageReducer.serviceSource;
       return {
         stateDestination: state.homepageReducer.serviceSelected,
-        stateSource: getPageItems(
-          state.homepageReducer.serviceSource,
-          state.homepageReducer.pageName
-        ),
+        stateSource: state.homepageReducer.serviceSource,
       };
     default:
       return state;

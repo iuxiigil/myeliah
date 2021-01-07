@@ -52,7 +52,7 @@ export default function homepageReducer(state = initialState, action) {
         case "Home":
           return {
             ...state,
-            // homeSelected: action.selectDestination,
+            homeSelected: action.selectDestination,
             homesource: action.selectSource
               ? action.selectSource
               : DefaultSource,
@@ -60,7 +60,7 @@ export default function homepageReducer(state = initialState, action) {
         case "AboutUs":
           return {
             ...state,
-            // aboutusSelected: action.selectDestination,
+            aboutusSelected: action.selectDestination,
             aboutusSource: action.selectSource
               ? action.selectSource
               : DefaultSource,
@@ -68,6 +68,7 @@ export default function homepageReducer(state = initialState, action) {
         default:
           return { ...state };
       }
+
     case HOMECOMPONENTS.UPDATE_DESTINATION_COMPONENTS:
       switch (action.pageName) {
         case "Home":
@@ -101,6 +102,7 @@ export default function homepageReducer(state = initialState, action) {
         pageName: action.category,
         filter: {
           ...state.filter,
+
           category: action.category,
         },
       };
