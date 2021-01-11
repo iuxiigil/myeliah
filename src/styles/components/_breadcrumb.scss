@@ -6,7 +6,7 @@
     repeat: no-repeat;
   }
   padding: emCal(16, 50) 0;
-  margin-bottom: remCal(100);
+  margin-bottom: remCal(20);
   h2 {
     @include typo($fsz: emCal(16, 50), $fw: 700);
     margin-bottom: emCal(50, 20);

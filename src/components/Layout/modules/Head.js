@@ -33,19 +33,19 @@ const Meta = (props) => (
 
       <link
         rel="stylesheet"
-        href="/static/fonts/feather-font/css/iconfont.css"
+        // href="/static/fonts/feather-font/css/iconfont.css"
       />
 
       <link
         rel="stylesheet"
         type="text/css"
-        href="/static/css/bootstrap.min.css"
+        // href="/static/css/bootstrap.min.css"
       />
-      <link rel="stylesheet" type="text/css" href="/static/css/slick.min.css" />
+      {/* <link rel="stylesheet" type="text/css" href="/static/css/slick.min.css" /> */}
       <link
         rel="stylesheet"
         type="text/css"
-        href="/static/fonts/font-awesome/css/font-awesome.min.css"
+        // href="/static/fonts/font-awesome/css/font-awesome.min.css"
       />
       <link rel="icon" href="/fav.png" />
       <link

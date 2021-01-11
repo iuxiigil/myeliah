@@ -13,7 +13,7 @@
 @import '~react-tabs/style/react-tabs.css';
 @import '~react-toastify/dist/ReactToastify.css';
 @import '~react-image-lightbox/style.css';
-
+@import "react-big-calendar/lib/addons/dragAndDrop/styles.scss";
 /* project styles */
 @import "abstracts/functions";
 @import "abstracts/mixins";
@@ -72,3 +72,4 @@
 @import "pages/services";
 @import "pages/shop";
 @import "pages/wishlist";
+@import "calendar/react-big-calendar";

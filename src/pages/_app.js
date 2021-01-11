@@ -7,7 +7,7 @@ import ScrollToTop from "react-scroll-to-top";
 import "../styles/styles.scss";
 import Loading from "../components/Other/Loading";
 import withReduxStore from "../common/with-redux-store";
-
+// import "assets/css/nextjs-material-dashboard.css?v=1.0.0";
 /*
   Next.js使用App組件來初始化頁面 
   Component屬性即當前page，因此，每當你在路由之間切換時，Component都會更新為新的page。因此，你傳遞給Component的任何屬性都將會被page接收到。
