@@ -42,13 +42,11 @@
     },
     { "title": "部落格", "to": "/blog" },
     { "title": "聯絡我們", "to": "/other/contact" },
-    { "title": "版位", "to": "#", 
+    { "title": "版位", "to": "/homepages/DnDHome", 
         "subMenu": [
-            { "title": "首頁設定", "to": "/homepages/DnDHome"},
-            { "title": "服務設定", "to": "/homepages/DnDHome"},
-            { "title": "關於我們設定", "to": "/homepages/DnDHome"},
-            { "title": "聯絡我們設定", "to": "/homepages/DnDHome"},
-            { "title": "部落格設定", "to": "/homepages/DnDHome"}
+            { "title": "版型設定", "to": "/homepages/DnDHome"},
+            { "title": "我的日曆", "to": "/other/myCalendar"}
+            
         ]
     }
 ]

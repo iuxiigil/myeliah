@@ -23,6 +23,7 @@ import {
 
 import styled from "styled-components";
 import Select from "react-select";
+import AsyncCreatableSelect from "react-select/async-creatable";
 /**
  * 左右邊選取的元件
  * SelectionDestination =>選取的元件
@@ -55,11 +56,10 @@ const customStyles = {
     ...provided,
     borderBottom: "1px dotted pink",
     color: state.isSelected ? "red" : "blue",
-    padding: 20,
+    padding: 10,
   }),
   control: () => ({
-    // none of react-select's styles are passed to <Control />
-    width: 300,
+    width: 140,
   }),
   singleValue: (provided, state) => {
     const opacity = state.isDisabled ? 0.5 : 1;
@@ -149,6 +149,7 @@ const options = [
   { value: "AboutUs", label: "關於我們" },
   { value: "Service", label: "服務" },
 ];
+
 /**
  * Components Start
  */
@@ -305,14 +306,19 @@ class HomePageDnDRedux extends Component {
             <div className="container">
               <DragDropContext onDragEnd={this.onDragEnd}>
                 <div className="row">
-                  <div className="-medium">元件來源</div>
-
-                  <Select
-                    styles={customStyles}
-                    value={this.state.selectedOption}
-                    onChange={this.handleChange}
-                    options={options}
-                  />
+                  <div className="col-4">
+                    <div className="-medium">元件來源</div>
+                  </div>
+                  <div className="col-8">
+                    <Select
+                      styles={customStyles}
+                      value={this.state.selectedOption}
+                      onChange={this.handleChange}
+                      options={options}
+                    />
+                  </div>
+                </div>
+                <div className="col-12">
                   <Droppable droppableId="droppable" direction="horizontal">
                     {(provided, snapshot) => (
                       <Container
