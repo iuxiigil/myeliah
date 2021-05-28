@@ -2,16 +2,17 @@ import Link from "next/link";
 import classNames from "classnames";
 
 import menuData from "../../../data/header/navigation.json";
+import multilingual from "../../../common/multilingual";
 
 export default function Navigator({ disableSubmenu, className }) {
   function renderMenu() {
     return menuData.map((item, index) => {
-      if (item.title === "Home") {
+      if (item.title === "menu.Home") {
         return (
           <li className="relative" key={index}>
             <Link href={process.env.PUBLIC_URL + item.to}>
               <a>
-                {item.title}
+                {multilingual(item.title)}
                 <span className="dropable-icon">
                   <i className="fas fa-angle-down"></i>
                 </span>
@@ -21,7 +22,7 @@ export default function Navigator({ disableSubmenu, className }) {
               {item.subMenu.map((i, index) => (
                 <li key={index}>
                   <Link href={i.to}>
-                    <a>{i.title}</a>
+                    <a>{multilingual(i.title)}</a>
                   </Link>
                 </li>
               ))}
@@ -52,12 +53,12 @@ export default function Navigator({ disableSubmenu, className }) {
           </li>
         );
       }
-      if (item.title === "商店") {
+      if (item.title === "menu.Shop") {
         return (
           <li key={index}>
             <Link href={process.env.PUBLIC_URL + item.to}>
               <a>
-                {item.title}
+                {multilingual(item.title)}
                 <span className="dropable-icon">
                   <i className="fas fa-angle-down"></i>
                 </span>
@@ -68,7 +69,7 @@ export default function Navigator({ disableSubmenu, className }) {
                 {item.subMenu.slice(0, 4).map((i, index) => (
                   <li key={index}>
                     <Link href={process.env.PUBLIC_URL + i.to}>
-                      <a>{i.title}</a>
+                      <a>{multilingual(i.title)}</a>
                     </Link>
                   </li>
                 ))}
@@ -77,7 +78,7 @@ export default function Navigator({ disableSubmenu, className }) {
                 {item.subMenu.slice(4, 8).map((i, index) => (
                   <li key={index}>
                     <Link href={process.env.PUBLIC_URL + i.to}>
-                      <a>{i.title}</a>
+                      <a>{multilingual(i.title)}</a>
                     </Link>
                   </li>
                 ))}
@@ -86,7 +87,7 @@ export default function Navigator({ disableSubmenu, className }) {
                 {item.subMenu.slice(8).map((i, index) => (
                   <li key={index}>
                     <Link href={process.env.PUBLIC_URL + i.to}>
-                      <a>{i.title}</a>
+                      <a>{multilingual(i.title)}</a>
                     </Link>
                   </li>
                 ))}
@@ -111,7 +112,7 @@ export default function Navigator({ disableSubmenu, className }) {
       return (
         <li key={index}>
           <Link href={process.env.PUBLIC_URL + item.to}>
-            <a>{item.title}</a>
+            <a>{multilingual(item.title)}</a>
           </Link>
         </li>
       );
@@ -124,7 +125,7 @@ export default function Navigator({ disableSubmenu, className }) {
           {menuData.map((item, index) => (
             <li key={index}>
               <Link href={process.env.PUBLIC_URL + item.to}>
-                <a>{item.title}</a>
+                <a>{multilingual(item.title)}</a>
               </Link>
             </li>
           ))}

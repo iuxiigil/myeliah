@@ -1,22 +1,22 @@
 [
   {
-    "title": "Buy 1 get 1",
-    "subTitle": "Start skincare",
+    "title": "買一送一",
+    "subTitle": "新會員",
     "background": "/assets/images/introduction/IntroductionTen/big-1.png"
   },
   {
-    "title": "50 off",
-    "subTitle": "big discound",
+    "title": "全面5折起",
+    "subTitle": "活動促銷",
     "background": "/assets/images/introduction/IntroductionTen/small-1.png"
   },
   {
-    "title": "Sale 30%",
-    "subTitle": "for All palettes",
+    "title": "特價3折",
+    "subTitle": "特價商品",
     "background": "/assets/images/introduction/IntroductionTen/small-2.png"
   },
   {
-    "title": "Buy 3 get 15%",
-    "subTitle": "Supper sale",
+    "title": "三件85折",
+    "subTitle": "最優惠",
     "background": "/assets/images/introduction/IntroductionTen/big-2.png"
   }
 ]

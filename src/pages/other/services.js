@@ -26,10 +26,10 @@ let customerSelect = [];
 
 export default function homepage1() {
   customerSelect = useSelector((state) =>
-    state.homepageReducer.homeSelected
-      ? state.homepageReducer.homeSelected
+    state.pagesReducer.pagesSelected
+      ? state.pagesReducer.pagesSelected
       : DefaultDestination
   );
-
-  return <MainLayout1 Data={customerSelect.Services} Title="服務" />;
+  console.log(customerSelect.Service);
+  return <MainLayout1 Data={customerSelect.Service} Title="服務" />;
 }

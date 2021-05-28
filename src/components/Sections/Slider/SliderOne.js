@@ -4,7 +4,7 @@ import { CSSTransition } from "react-transition-group";
 
 import Button from "../../Control/Button";
 
-export default function SliderOne({ data, className }) {
+export default function SliderOne({ data, className, multilingual }) {
   const [contentShow, setContentShow] = useState(false);
   useEffect(() => {
     setContentShow(true);

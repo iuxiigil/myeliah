@@ -1,21 +1,21 @@
 [
   {
-    "name": "Body treatment",
+    "name": "身體保養",
     "videoPoster": "/assets/images/introduction/IntroductionTwo/1.png",
     "videoSrc": "https://www.youtube.com/embed/80e0QHPYRG4"
   },
   {
-    "name": "Professinal makeup",
+    "name": "專業美容",
     "videoPoster": "/assets/images/introduction/IntroductionTwo/2.png",
     "videoSrc": "https://www.youtube.com/embed/xn7jfVWWSio"
   },
   {
-    "name": "Maincure & pedicure",
+    "name": "美甲護足",
     "videoPoster": "/assets/images/introduction/IntroductionTwo/3.png",
     "videoSrc": "https://www.youtube.com/embed/K3M-czGNUCg"
   },
   {
-    "name": "Hair cut & Coloring",
+    "name": "剪燙染髮",
     "videoPoster": "/assets/images/introduction/IntroductionTwo/4.png",
     "videoSrc": "https://www.youtube.com/embed/hoPiGLf0ICA"
   }

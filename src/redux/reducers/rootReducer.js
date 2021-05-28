@@ -3,13 +3,15 @@ import { combineReducers } from "redux";
 import cartReducer from "./cartReducer";
 import wishlistReducer from "./wishlistReducer";
 import shopReducers from "./shopReducers";
-import homepageReducer from "./homepageReducer";
 
+import pagesReducer from "../pages/pagesReducers";
+import LanguageSwitcher from "./languageSwitcher/reducer";
 const rootReducer = combineReducers({
   cartReducer,
   wishlistReducer,
   shopReducers,
-  homepageReducer,
+  pagesReducer,
+  LanguageSwitcher,
 });
 
 export default rootReducer;

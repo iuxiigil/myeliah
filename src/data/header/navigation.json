@@ -1,52 +1,45 @@
 [{
-        "title": "Home",
+        "title": "menu.Home",
         "to": "/homepages/homepage1",
         "subMenu": [
-            { "title": "美麗佳人", "to": "/homepages/homepage1" },
-            { "title": "美妝沙龍", "to": "/homepages/homepage2" },
-            { "title": "天然有機", "to": "/homepages/homepage3" },
-            { "title": "水療", "to": "/homepages/homepage4" },
-            { "title": "面膜", "to": "/homepages/homepage5" },
-            { "title": "護膚中心", "to": "/homepages/homepage6" }
+            { "title": "menu.Home1", "to": "/homepages/homepage1" },
+            { "title": "menu.Home2", "to": "/homepages/homepage2" },
+            { "title": "menu.Home3", "to": "/homepages/homepage3" },
+            { "title": "menu.Home4", "to": "/homepages/homepage4" },
+            { "title": "menu.Home5", "to": "/homepages/homepage5" },
+            { "title": "menu.Home6", "to": "/homepages/homepage6" }
         ]
     },
-    { "title": "服務", "to": "/other/services" },
-    { "title": "關於我們", "to": "/other/about" },
+    { "title": "menu.Service", "to": "/other/services" },
+    { "title": "menu.About", "to": "/other/about" },
     {
-        "title": "商店",
+        "title": "menu.Shop",
         "to": "/shop/fullwidth-4col",
 
         "subMenu": [
-            { "title": "滿版四品", "to": "/shop/fullwidth-4col" },
-            { "title": "滿版五品", "to": "/shop/fullwidth-5col" },
+            { "title": "menu.full-4", "to": "/shop/fullwidth-4col" },
+            { "title": "menu.full-5", "to": "/shop/fullwidth-5col" },
             {
-                "title": "滿版左測",
+                "title": "menu.full-left",
                 "to": "/shop/fullwidth-left-sidebar"
             },
             {
-                "title": "滿版右測",
+                "title": "menu.full-right",
                 "to": "/shop/fullwidth-right-sidebar"
             },
-            { "title": "網格四品", "to": "/shop/grid-4col" },
-            { "title": "網格三品", "to": "/shop/grid-3col" },
-            { "title": "網格左側分類", "to": "/shop/grid-sidebar" },
-            { "title": "網格列表左側分類", "to": "/shop/list-sidebar" },
+            { "title": "menu.Grid-4", "to": "/shop/grid-4col" },
+            { "title": "menu.Grid-3", "to": "/shop/grid-3col" },
+            { "title": "menu.Grid-left", "to": "/shop/grid-sidebar" },
+            { "title": "menu.Grid-left-category", "to": "/shop/list-sidebar" },
             {
-                "title": "商品明細",
+                "title": "menu.Productdetail",
                 "to": "#"
             },
-            { "title": "購物車", "to": "/shop/cart" },
-            { "title": "結帳", "to": "/shop/checkout" },
-            { "title": "常購清單", "to": "/shop/wishlist" }
+            { "title": "menu.Cart", "to": "/shop/cart" },
+            { "title": "menu.Checkout", "to": "/shop/checkout" },
+            { "title": "menu.Wisher", "to": "/shop/wishlist" }
         ]
     },
-    { "title": "部落格", "to": "/blog" },
-    { "title": "聯絡我們", "to": "/other/contact" },
-    { "title": "版位", "to": "/homepages/DnDHome", 
-        "subMenu": [
-            { "title": "版型設定", "to": "/homepages/DnDHome"},
-            { "title": "我的日曆", "to": "/other/myCalendar"}
-            
-        ]
-    }
+    { "title": "menu.Blog", "to": "/blog" },
+    { "title": "menu.Contact", "to": "/other/contact" }
 ]

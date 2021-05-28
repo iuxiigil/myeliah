@@ -33,6 +33,7 @@
         "react-hook-form": "^5.7.2",
         "react-hooks-paginator": "^0.4.4",
         "react-image-lightbox": "^5.1.1",
+        "react-intl": "^5.18.0",
         "react-lightgallery": "^0.6.3",
         "react-mailchimp-subscribe": "^2.1.0",
         "react-redux": "^7.2.0",

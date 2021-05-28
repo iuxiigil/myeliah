@@ -14,6 +14,7 @@ export default function ProductTabTwo({
   title,
   titleSize,
   numberOfProducts,
+  multilingual,
 }) {
   const [currentCategory, setCurrentCategory] = useState(
     categories ? categories[0] : "All"
@@ -30,7 +31,9 @@ export default function ProductTabTwo({
     <div className="product-tab -style-2">
       <div className="container">
         <div className="product-tab__header">
-          <h5 style={{ fontSize: titleSize }}>{title || "New arrivals"}</h5>
+          <h5 style={{ fontSize: titleSize }}>
+            {title || multilingual("content.NewArrivals")}
+          </h5>
           <div className="product-tab-slide__header__controller">
             <ul>
               {categories.map((category, index) => (
@@ -63,7 +66,7 @@ export default function ProductTabTwo({
         <div className="product-tab__content">
           {!filteredProduct || filteredProduct.length === 0 ? (
             <div className="product-tab__content__empty">
-              <h3>No product found</h3>
+              <h3>{multilingual("content.Noproductfound")}</h3>
             </div>
           ) : (
             <>

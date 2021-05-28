@@ -28,8 +28,8 @@
 
 // export default function () {
 //   customerSelect = useSelector((state) =>
-//     state.homepageReducer.aboutusSelected
-//       ? state.homepageReducer.aboutusSelected
+//     state.pagesReducer.aboutusSelected
+//       ? state.pagesReducer.aboutusSelected
 //       : DefaultSource
 //   );
 //   customerDestination = [];
@@ -64,8 +64,8 @@ let customerSelect = [];
 
 export default function homepage1() {
   customerSelect = useSelector((state) =>
-    state.homepageReducer.homeSelected
-      ? state.homepageReducer.homeSelected
+    state.pagesReducer.pagesSelected
+      ? state.pagesReducer.pagesSelected
       : DefaultDestination
   );
 

@@ -11,7 +11,7 @@ export default function BrandsOne() {
                 spaceBottom="0px"
                 description="Discover products with brands"
               >
-                Our brands
+                我們的品牌
               </SectionTitleOne>
             </div>
             <div className="col-12 col-md-8">

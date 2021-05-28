@@ -22,7 +22,7 @@ import BrandsOne from "../../components/Sections/Brands/BrandsOne"; //DndId:0
 import BlogOne from "../../components/Sections/Blog/BlogOne"; //DndId:1
 import BlogTwo from "../../components/Sections/Blog/BlogTwo"; //DndId:2
 import BlogThree from "../../components/Sections/Blog/BlogThree"; //DndId:3
-import CategoriesOne from "../../components/Sections/Categories/CategoriesOne"; //DndId:4
+import CategoriesOneWithData from "../../components/Sections/Categories/CategoryOneWithData"; //DndId:4
 import CategoriesTwo from "../../components/Sections/Categories/CategoriesTwo"; //DndId:5
 import CTAOne from "../../components/Sections/CallToAction/CTAOne"; //DndId:6
 import CTATwo from "../../components/Sections/CallToAction/CTATwo"; //DndId:7
@@ -32,7 +32,7 @@ import DaleOfWeekThree from "../../components/Sections/DealOfWeek/DaleOfWeekThre
 import InstagramOne from "../../components/Sections/Instagram/InstagramOne"; //DndId:11
 import InstagramTwo from "../../components/Sections/Instagram/InstagramTwo"; //DndId:12
 import IntroductionOne from "../../components/Sections/Introduction/IntroductionOne"; //DndId:13
-import IntroductionTwo from "../../components/Sections/Introduction/IntroductionTwo"; //DndId:14
+import IntroductionTwoWithData from "../../components/Sections/IntroductionWithData/introductionTwoWithData"; //DndId:14
 import IntroductionThree from "../../components/Sections/Introduction/IntroductionThree"; //DndId:15
 import IntroductionFour from "../../components/Sections/Introduction/IntroductionFour"; //DndId:16
 import IntroductionFive from "../../components/Sections/Introduction/IntroductionFive"; //DndId:17
@@ -42,21 +42,21 @@ import IntroductionEight from "../../components/Sections/Introduction/Introducti
 import IntroductionNine from "../../components/Sections/Introduction/IntroductionNine"; //DndId:21
 import IntroductionTen from "../../components/Sections/Introduction/IntroductionTen"; //DndId:22
 //DndId:23 ProductSlider
-import ProductSlideOne from "../../components/Sections/ProductThumb/ProductSlide/ProductSlideOne"; //DndId:24
-import ProductSlideTwo from "../../components/Sections/ProductThumb/ProductSlide/ProductSlideTwo"; //DndId:25
+import ProductSlideOneWithData from "../../components/Sections/ProductThumb/ProductSlide/ProductSlideOneWithData"; //DndId:24
+import ProductSlideTwoWithData from "../../components/Sections/ProductThumb/ProductSlide/ProductSlideTwoWithData"; //DndId:25
 //DndId:26 ProductGrid
 import ProductTabOne from "../../components/Sections/ProductThumb/ProductTab/ProductTabOne"; //DndId:27
 import ProductTabTwo from "../../components/Sections/ProductThumb/ProductTab/ProductTabTwo"; //DndId:28
 import ProductTabSlideOne from "../../components/Sections/ProductThumb/ProductTabSlide/ProductTabSlideOne"; //DndId:29
 //DndId:30 SectionTitleOne
-import SliderOne from "../../components/Sections/Slider/SliderOne"; //DndId:31
-import SliderTwo from "../../components/Sections/Slider/SliderTwo"; //DndId:32
+import SliderOneWithData from "../../components/Sections/Slider/SliderOneWithData"; //DndId:31
+import SliderTwoWithData from "../../components/Sections/Slider/SliderTwoWithData"; //DndId:32
 import TeamOne from "../../components/Sections/Team/TeamOne"; //DndId:33
 import TestimonialOne from "../../components/Sections/Testimonial/TestimonialOne"; //DndId:34
 import TestimonialTwo from "../../components/Sections/Testimonial/TestimonialTwo"; //DndId:35
 import TestimonialThree from "../../components/Sections/Testimonial/TestimonialThree"; //DndId:36
 import LeftRightShow from "../../components/Sections/LeftRightShow/LeftRightShow";
-import products from "../../data/products.json";
+import { shop } from "../../common/variables";
 
 //DndId:37 ShopHeader
 //DndId:38 ShopProducts
@@ -64,49 +64,47 @@ import products from "../../data/products.json";
 
 //資料部分
 import productSlideOneData from "../../data/products.json";
-// import testimonialOneData from "../../data/testimonial/data.json";
-import introductionOneData from "../../data/introduction/introductionOne.json";
-import introductionTwoData from "../../data/introduction/introductionTwo.json";
 import introductionSevenData from "../../data/introduction/introductionSeven.json";
 import introductionSixData from "../../data/introduction/introductionSix.json";
 import introductionEightData from "../../data/introduction/introductionEight.json";
 import introductionTenData from "../../data/introduction/introductionTen.json";
-import sliderData from "../../data/slider/sliderOne.json";
-import sliderData5 from "../../data/slider/sliderFive.json";
+
 import teamOneData from "../../data/team/teamOne.json";
 import blogOneData from "../../data/blog/blog.json";
 import blogData from "../../data/blog/blog.json";
 import categoriesOneData from "../../data/categories/categoryOne.json";
-import categoriesTwoData from "../../data/categories/categoryTwo.json";
 import productTabOneData from "../../data/products.json";
 import servicesData from "../../data/pages/services.json";
-import { shop } from "../../common/variables";
-import testimonialOneData from "../../data/testimonial/data.json";
 import testimonialData from "../../data/testimonial/testimonialThree.json";
+import IntroductionOneWithData from "../../components/Sections/IntroductionWithData/IntroductionOneWithData";
 
 //注意：官网提示React.lazy并不适合SSR
+//http://bpecapi.azurewebsites.net/api/Page/PageSearch
 
-export const DefaultDestination = {
+export const DefaultDestination = {};
+export const DefaultDestination_1 = {
+  Code: 200,
+  Message: "",
   Home: [
     {
-      id: "32",
-      key: "32",
+      id: "31",
+      key: "31",
     },
     {
-      id: "15",
-      key: "15",
+      id: "4",
+      key: "4",
     },
     {
-      id: "16",
-      key: "16",
+      id: "14",
+      key: "14",
     },
     {
-      id: "36",
-      key: "36",
+      id: "22",
+      key: "22",
     },
     {
-      id: "30",
-      key: "30",
+      id: "25",
+      key: "25",
     },
   ],
   About: [
@@ -119,8 +117,8 @@ export const DefaultDestination = {
       key: "21",
     },
     {
-      id: "0",
-      key: "0",
+      id: "16",
+      key: "16",
     },
     {
       id: "1",
@@ -182,7 +180,7 @@ export const DefaultSource = [
   },
   {
     category: ["Home"],
-    comName: <CategoriesOne data={categoriesOneData} />,
+    comName: <CategoriesOneWithData />,
     componentName: "CategoriesOne",
     id: "4",
     key: "4",
@@ -263,7 +261,7 @@ export const DefaultSource = [
   },
   {
     category: ["Home"],
-    comName: <IntroductionOne data={introductionOneData} />,
+    comName: <IntroductionOneWithData />,
     componentName: "IntroductionOne",
     id: "13",
     key: "13",
@@ -272,7 +270,7 @@ export const DefaultSource = [
   },
   {
     category: ["Home"],
-    comName: <IntroductionTwo data={introductionTwoData} />,
+    comName: <IntroductionTwoWithData />,
     componentName: "IntroductionTwo",
     id: "14",
     key: "14",
@@ -362,7 +360,7 @@ export const DefaultSource = [
   },
   {
     category: ["Home"],
-    comName: <ProductSlideOne data={products} />,
+    comName: <ProductSlideOneWithData />,
     componentName: "ProductSlideOne",
     id: "24",
     key: "24",
@@ -371,7 +369,7 @@ export const DefaultSource = [
   },
   {
     category: ["Home"],
-    comName: <ProductSlideTwo data={products} />,
+    comName: <ProductSlideTwoWithData />,
     componentName: "ProductSlideTwo",
     id: "25",
     key: "25",
@@ -427,20 +425,20 @@ export const DefaultSource = [
   },
   {
     category: ["Home"],
-    comName: <SliderOne data={sliderData5} className="-style-5" />,
+    comName: <SliderOneWithData />,
     componentName: "SliderOne",
     id: "31",
     key: "31",
-    remark: "側邊-1",
+    remark: "大輪播-1",
     src: "/assets/images/prototypes/Slider/SliderOne.png",
   },
   {
     category: ["Home"],
-    comName: <SliderTwo data={sliderData} className="-style-1" showDots />,
+    comName: <SliderTwoWithData />,
     componentName: "SliderTwo",
     id: "32",
     key: "32",
-    remark: "側邊-2",
+    remark: "大輪播-2",
     src: "/assets/images/prototypes/Slider/SliderTwo.png",
   },
   {

@@ -6,7 +6,13 @@ import Slider from "react-slick";
 import Button from "../../Control/Button";
 import { PrevArrow, NextArrow } from "../../Other/SliderArrow";
 
-export default function SliderTwo({ className, data, showArrows, showDots }) {
+export default function SliderTwo({
+  className,
+  data,
+  showArrows,
+  showDots,
+  multilingual,
+}) {
   const [sliderIndex, setSliderIndex] = useState();
   const [sliderReady, setSliderReady] = useState();
   useEffect(() => {

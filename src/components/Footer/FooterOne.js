@@ -4,6 +4,8 @@ import SubcribeEmail from "../Other/SubcribeEmail";
 import SocialIcons from "../Other/SocialIcons";
 import footerLinks from "../../data/footer/links.json";
 import footerInfomation from "../../data/footer/info.json";
+import multilingual from "../../common/multilingual";
+//
 
 export default function FooterOne() {
   return (
@@ -21,7 +23,7 @@ export default function FooterOne() {
             </Link>
           </div>
           <div className="footer-one__header__newsletter">
-            <span>Subscribe Newletter:</span>
+            <span>{multilingual("footer.SubscribeNews")}:</span>
             <SubcribeEmail
               mailchimpUrl="https://jster.us7.list-manage.com/subscribe/post?u=ed40c0084a0c5ba31b3365d65&id=ec6f32bf5e"
               placeholder="Enter your email"
@@ -37,18 +39,24 @@ export default function FooterOne() {
           <div className="row">
             <div className="col-12 col-md-6 col-lg-4">
               <div className="footer__section -info">
-                <h5 className="footer-title">聯絡資訊</h5>
+                <h5 className="footer-title">
+                  {multilingual("footer.contactInfo")}
+                </h5>
                 <p>
-                  地址: <span>{footerInfomation.address}</span>
+                  {multilingual("footer.addresstitle")}{" "}
+                  <span>{multilingual("footer.address")}</span>
                 </p>
                 <p>
-                  電話: <span>{footerInfomation.phone}</span>
+                  {multilingual("footer.phonetitle")}
+                  <span>{multilingual("footer.phone")}</span>
                 </p>
                 <p>
-                  Email: <span>{footerInfomation.email}</span>
+                  {multilingual("footer.emailtitle")}{" "}
+                  <span>{multilingual("footer.email")}</span>
                 </p>
                 <p>
-                  營業時間: <span>{footerInfomation.open}</span>
+                  {multilingual("footer.opentitle")}{" "}
+                  <span>{multilingual("footer.open")}</span>
                 </p>
               </div>
             </div>
@@ -56,7 +64,9 @@ export default function FooterOne() {
               <div className="footer__section -links">
                 <div className="row">
                   <div className="col-12 col-sm-6">
-                    <h5 className="footer-title">會員中心</h5>
+                    <h5 className="footer-title">
+                      {multilingual("footer.membercenter")}
+                    </h5>
                     <ul>
                       {footerLinks.accountLinks.map((link, index) => (
                         <li key={index}>
@@ -68,7 +78,9 @@ export default function FooterOne() {
                     </ul>
                   </div>
                   <div className="col-12 col-sm-6">
-                    <h5 className="footer-title">其他資訊</h5>
+                    <h5 className="footer-title">
+                      {multilingual("footer.otherInfo")}
+                    </h5>
                     <ul>
                       {footerLinks.informationLinks.map((link, index) => (
                         <li key={index}>
@@ -84,7 +96,9 @@ export default function FooterOne() {
             </div>
             <div className="col-12 col-lg-4">
               <div className="footer__section -payment">
-                <h5 className="footer-title">付款方式</h5>
+                <h5 className="footer-title">
+                  {multilingual("footer.paymentway")}
+                </h5>
                 <p> </p>
                 <div className="payment-methods">
                   <img
@@ -103,7 +117,7 @@ export default function FooterOne() {
       <div className="footer-one__footer">
         <div className="container">
           <div className="footer-one__footer__wrapper">
-            <p>© Copyright 2020 Beauty</p>
+            <p>© Copyright 2021 Bankpro</p>
             <ul>
               {footerLinks.creditLinks.map((link, index) => (
                 <li key={index}>

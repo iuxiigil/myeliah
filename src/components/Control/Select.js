@@ -2,12 +2,13 @@ import PropTypes from "prop-types";
 import classNames from "classnames";
 
 export default function Select(props) {
-  const { options, className, getValue, id, placeholder } = props;
+  const { options, className, getValue, id, placeholder, lagvalue } = props;
   return (
     <select
       id={id}
       onChange={(e) => getValue(e.target.value)}
       className={`customed-select ${classNames(className)}`}
+      value={lagvalue}
     >
       {placeholder && (
         <option value="" disabled selected>

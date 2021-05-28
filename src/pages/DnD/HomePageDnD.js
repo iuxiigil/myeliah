@@ -509,10 +509,10 @@ const mapStateToProps = (state) => {
   switch (state.homepageReducer.pageName) {
     case "Home":
       console.log("Home", state.homepageReducer.homeSource);
-      myDestination = state.homepageReducer.homeSelected;
+      myDestination = state.homepageReducer.pagesSelected;
       mySource = state.homepageReducer.homeSource;
       return {
-        stateDestination: state.homepageReducer.homeSelected,
+        stateDestination: state.homepageReducer.pagesSelected,
         stateSource: state.homepageReducer.homeSource,
         pageName: state.homepageReducer.pageName,
       };

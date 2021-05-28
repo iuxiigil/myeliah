@@ -62,11 +62,11 @@ export default function () {
                 getCurrentView={(view) => setCurrentView(view)}
               />
               {!currentData || currentData.length === 0 ? (
-                <h1>No product found</h1>
+                <h1>查無商品</h1>
               ) : (
                 <>
                   <ShopProducts
-                    gridColClass="col-12 col-sm-6 col-lg-4"
+                    gridColClass="col-6 col-sm-6 col-lg-3"
                     listColClass="col-12 "
                     view={currentView}
                     data={currentData.slice(offset, offset + pageLimit)}

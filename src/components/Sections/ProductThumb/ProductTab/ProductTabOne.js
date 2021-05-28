@@ -7,7 +7,7 @@ import Product from "../../../Product";
 import Button from "../../../Control/Button";
 import { getProducts } from "../../../../common/productSelect";
 
-export default function ProductTabOne({ data, categories }) {
+export default function ProductTabOne({ data, categories, multilingual }) {
   const [currentCategory, setCurrentCategory] = useState(
     categories ? categories[0] : "All"
   );
@@ -16,7 +16,9 @@ export default function ProductTabOne({ data, categories }) {
   return (
     <div className="product-tab -style-1">
       <div className="container">
-        <SectionTitleOne align="center">New arrivals</SectionTitleOne>
+        <SectionTitleOne align="center">
+          multilingual("content.NewArrivals")
+        </SectionTitleOne>
         <div className="product-tab__header">
           <ul>
             {categories.map((category, index) => (
@@ -41,7 +43,7 @@ export default function ProductTabOne({ data, categories }) {
         <div className="product-tab__content">
           {!filteredProduct || filteredProduct.length === 0 ? (
             <div className="product-tab__content__empty">
-              <h3>No product found</h3>
+              <h3>{multilingual("content.Noproductfound")}</h3>
             </div>
           ) : (
             <>

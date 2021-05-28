@@ -4,18 +4,21 @@ import Head from "next/head";
 import FooterOne from "../Footer/FooterOne";
 import withScrollFixed from "../../common/withScrollFixed";
 import HeaderOne from "../Header/HeaderOne";
-
+// import { useIntl } from "react-intl";
+import multilingual from "../../common/multilingual";
 let ScrollFixedHeader = withScrollFixed(HeaderOne);
 
 export default function LayoutOne(props) {
+  // const intl = useIntl();
+
   return (
     <>
       <Head>
-        <title>{props.title || "水璉沙-美姿 | React"}</title>
+        <title>{props.title || multilingual("app.homeTitle")}</title>
       </Head>
       <ScrollFixedHeader container={props.container} />
       {props.children}
-      <FooterOne />
+      <FooterOne multilingual={multilingual} />
     </>
   );
 }

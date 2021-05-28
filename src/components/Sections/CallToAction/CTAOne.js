@@ -2,7 +2,7 @@ import { useForm } from "react-hook-form";
 
 import SectionTitleOne from "../SectionTitle/SectionTitleOne";
 
-export default function CTAOne() {
+export default function CTAOne({ multilingual }) {
   const { register, handleSubmit, watch, errors } = useForm({
     mode: "onChange",
   });
@@ -19,7 +19,7 @@ export default function CTAOne() {
           <div className="col-12 col-md-6 mx-auto">
             <div className="cta__form">
               <SectionTitleOne align="center" spaceBottom="1.875em">
-                Book Service
+                {multilingual("content.BookService")}
               </SectionTitleOne>
               <form
                 onSubmit={handleSubmit(onSubmit)}

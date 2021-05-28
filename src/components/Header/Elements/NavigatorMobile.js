@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import { CSSTransition } from "react-transition-group";
-
+import multilingual from "../../../common/multilingual";
 import menuData from "../../../data/header/navigation.json";
 
 export default function Navigator() {
@@ -21,7 +21,7 @@ export default function Navigator() {
                   setDropdownItem("home");
                 }}
               >
-                {item.title}
+                {multilingual(item.title)}
                 <span className="dropable-icon">
                   <i
                     className={`fas ${
@@ -41,7 +41,7 @@ export default function Navigator() {
                 {item.subMenu.map((i, index) => (
                   <li key={index}>
                     <Link href={`${process.env.PUBLIC_URL}${i.to}`}>
-                      <a>{i.title}</a>
+                      <a>{multilingual(i.title)}</a>
                     </Link>
                   </li>
                 ))}
@@ -63,7 +63,7 @@ export default function Navigator() {
                   setDropdownItem("版位");
                 }}
               >
-                {item.title}
+                {multilingual(item.title)}
                 <span className="dropable-icon">
                   <i
                     className={`fas ${
@@ -83,7 +83,7 @@ export default function Navigator() {
                 {item.subMenu.map((i, index) => (
                   <li key={index}>
                     <Link href={`${process.env.PUBLIC_URL}${i.to}`}>
-                      <a>{i.title}</a>
+                      <a>{multilingual(i.title)}</a>
                     </Link>
                   </li>
                 ))}
@@ -105,7 +105,7 @@ export default function Navigator() {
                   setDropdownItem("shop");
                 }}
               >
-                {item.title}
+                {multilingual(item.title)}
                 <span className="dropable-icon">
                   <i
                     className={`fas ${
@@ -126,7 +126,7 @@ export default function Navigator() {
                   {item.subMenu.slice(0, 4).map((i, index) => (
                     <li key={index}>
                       <Link href={`${process.env.PUBLIC_URL}${i.to}`}>
-                        <a>{i.title}</a>
+                        <a>{multilingual(i.title)}</a>
                       </Link>
                     </li>
                   ))}
@@ -135,7 +135,7 @@ export default function Navigator() {
                   {item.subMenu.slice(4, 8).map((i, index) => (
                     <li key={index}>
                       <Link href={`${process.env.PUBLIC_URL}${i.to}`}>
-                        <a>{i.title}</a>
+                        <a>{multilingual(i.title)}</a>
                       </Link>
                     </li>
                   ))}
@@ -144,7 +144,7 @@ export default function Navigator() {
                   {item.subMenu.slice(8).map((i, index) => (
                     <li key={index}>
                       <Link href={`${process.env.PUBLIC_URL}${i.to}`}>
-                        <a>{i.title}</a>
+                        <a>{multilingual(i.title)}</a>
                       </Link>
                     </li>
                   ))}
@@ -167,7 +167,7 @@ export default function Navigator() {
       return (
         <li key={index}>
           <Link href={item.to}>
-            <a>{item.title}</a>
+            <a>{multilingual(item.title)}</a>
           </Link>
         </li>
       );

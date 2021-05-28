@@ -1,0 +1,1330 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <title>::iCash::</title>
+    <style>
+        body {
+            font-family: verdana;
+            font-size: 9pt;
+        }
+        
+        td {
+            font-family: verdana;
+            font-size: 9pt;
+        }
+        
+        th {
+            font-family: verdana;
+            font-size: 9pt;
+            background: #d3d3d3;
+        }
+        
+        table {
+            background: #d3d3d3;
+        }
+        
+        tr {
+            background: #ffffff;
+        }
+        
+        tr:nth-child(odd) {
+            color: green;
+        }
+        
+        tr:nth-child(even) {
+            color: blue;
+            /*background: #ffd3ff;*/
+        }
+    </style>
+</head>
+
+<body>
+    <table border="0" cellspacing="0" cellpadding="0" width="750px" align="center">
+        <tr>
+            <td colspan="3" style="height:50;font-size:14pt;text-align:center;">
+                <a name="index"></a><b>索引</b></td>
+        </tr>
+    </table>
+    <table border="0" cellspacing="1" cellpadding="0" width="750px" align="center">
+        <tr>
+            <th>序</th>
+            <th>資料表名稱</th>
+            <th>型別</th>
+        </tr>
+        <tr>
+            <td align="center">1</td>
+            <td><a href="#Table:[dbo].[EstimatedPushNotification]">[dbo].[EstimatedPushNotification]</a></td>
+            <td>Table</td>
+        </tr>
+        <tr>
+            <td align="center">2</td>
+            <td><a href="#Table:[dbo].[Group]">[dbo].[Group]</a></td>
+            <td>Table</td>
+        </tr>
+        <tr>
+            <td align="center">3</td>
+            <td><a href="#Table:[dbo].[Member]">[dbo].[Member]</a></td>
+            <td>Table</td>
+        </tr>
+        <tr>
+            <td align="center">4</td>
+            <td><a href="#Table:[dbo].[MemberCategory]">[dbo].[MemberCategory]</a></td>
+            <td>Table</td>
+        </tr>
+        <tr>
+            <td align="center">5</td>
+            <td><a href="#Table:[dbo].[MemberGroup]">[dbo].[MemberGroup]</a></td>
+            <td>Table</td>
+        </tr>
+        <tr>
+            <td align="center">6</td>
+            <td><a href="#Table:[dbo].[MemberNotification]">[dbo].[MemberNotification]</a></td>
+            <td>Table</td>
+        </tr>
+        <tr>
+            <td align="center">7</td>
+            <td><a href="#Table:[dbo].[MemberTag]">[dbo].[MemberTag]</a></td>
+            <td>Table</td>
+        </tr>
+        <tr>
+            <td align="center">8</td>
+            <td><a href="#Table:[dbo].[MemberTagMapping]">[dbo].[MemberTagMapping]</a></td>
+            <td>Table</td>
+        </tr>
+        <tr>
+            <td align="center">9</td>
+            <td><a href="#Table:[dbo].[PushNotificationDetail]">[dbo].[PushNotificationDetail]</a></td>
+            <td>Table</td>
+        </tr>
+        <tr>
+            <td align="center">10</td>
+            <td><a href="#Table:[dbo].[PushNotificationMaster]">[dbo].[PushNotificationMaster]</a></td>
+            <td>Table</td>
+        </tr>
+        <tr>
+            <td align="center">11</td>
+            <td><a href="#Table:[dbo].[PushNotificationTag]">[dbo].[PushNotificationTag]</a></td>
+            <td>Table</td>
+        </tr>
+    </table><br />
+    <p style="page-break-after:always;"></p>
+    <p style="page-break-after:always;"></p>
+    <br /><br /><br />
+    <table border="0" cellspacing="0" cellpadding="0" width="750px" align="center">
+        <tr>
+            <td align="right"><a href="#index">索引</a></td>
+        </tr>
+        <tr>
+            <th align="left">
+                <a name="Table:[dbo].[EstimatedPushNotification]"></a><b>Table:[dbo].[EstimatedPushNotification]</b></th>
+        </tr>
+    </table><br />
+    <table border="0" cellspacing="0" cellpadding="0" width="750px" align="center">
+        <tr>
+            <td><b>Description</b></td>
+        </tr>
+        <tr>
+            <td></td>
+        </tr>
+    </table><br />
+    <table border="0" cellspacing="0" cellpadding="0" width="750px" align="center">
+        <tr>
+            <td><b>資料表欄位</b></td>
+        </tr>
+    </table>
+    <table border="0" cellspacing="1" cellpadding="0" width="750px" align="center">
+        <tr>
+            <th>序</th>
+            <th>欄位名稱</th>
+            <th>資料型態</th>
+            <th>空值</th>
+            <th>說明</th>
+        </tr>
+        <tr>
+            <td width="20px" align="center">1</td>
+            <td width="250px">Id</td>
+            <td width="150px">INT</td>
+            <td width="50px" align="center">N</td>
+            <td>Id</td>
+        </tr>
+        <tr>
+            <td width="20px" align="center">2</td>
+            <td width="250px">Title</td>
+            <td width="150px">NVARCHAR(100)</td>
+            <td width="50px" align="center">N</td>
+            <td>推播抬頭</td>
+        </tr>
+        <tr>
+            <td width="20px" align="center">3</td>
+            <td width="250px">Body</td>
+            <td width="150px">NVARCHAR(100)</td>
+            <td width="50px" align="center">N</td>
+            <td>推播主題</td>
+        </tr>
+        <tr>
+            <td width="20px" align="center">4</td>
+            <td width="250px">PushContent</td>
+            <td width="150px">NVARCHAR(1000)</td>
+            <td width="50px" align="center">N</td>
+            <td>推播內容</td>
+        </tr>
+        <tr>
+            <td width="20px" align="center">5</td>
+            <td width="250px">Image</td>
+            <td width="150px">VARCHAR(100)</td>
+            <td width="50px" align="center">Y</td>
+            <td>推播夾帶圖檔</td>
+        </tr>
+        <tr>
+            <td width="20px" align="center">6</td>
+            <td width="250px">EstimatedDate</td>
+            <td width="150px">DATETIME</td>
+            <td width="50px" align="center">Y</td>
+            <td>預計推播日期</td>
+        </tr>
+        <tr>
+            <td width="20px" align="center">7</td>
+            <td width="250px">MemberId</td>
+            <td width="150px">INT</td>
+            <td width="50px" align="center">Y</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td width="20px" align="center">8</td>
+            <td width="250px">PushToken</td>
+            <td width="150px">VARCHAR(500)</td>
+            <td width="50px" align="center">Y</td>
+            <td>推播Token</td>
+        </tr>
+        <tr>
+            <td width="20px" align="center">9</td>
+            <td width="250px">ExecuteDate</td>
+            <td width="150px">DATETIME</td>
+            <td width="50px" align="center">Y</td>
+            <td>執行堆播日期</td>
+        </tr>
+        <tr>
+            <td width="20px" align="center">10</td>
+            <td width="250px">ExecuteCount</td>
+            <td width="150px">INT</td>
+            <td width="50px" align="center">Y</td>
+            <td>執行推播次數</td>
+        </tr>
+        <tr>
+            <td width="20px" align="center">11</td>
+            <td width="250px">CreateId</td>
+            <td width="150px">INT</td>
+            <td width="50px" align="center">N</td>
+            <td>建立者ID</td>
+        </tr>
+        <tr>
+            <td width="20px" align="center">12</td>
+            <td width="250px">CreateDate</td>
+            <td width="150px">DATETIME</td>
+            <td width="50px" align="center">N</td>
+            <td>建立者日期</td>
+        </tr>
+        <tr>
+            <td width="20px" align="center">13</td>
+            <td width="250px">UpdateId</td>
+            <td width="150px">INT</td>
+            <td width="50px" align="center">Y</td>
+            <td>更新者ID</td>
+        </tr>
+        <tr>
+            <td width="20px" align="center">14</td>
+            <td width="250px">UpdateDate</td>
+            <td width="150px">DATETIME</td>
+            <td width="50px" align="center">Y</td>
+            <td>更新日期</td>
+        </tr>
+    </table><br />
+    <table border="0" cellspacing="0" cellpadding="0" width="750px" align="center">
+        <tr>
+            <td><b>索引</b></td>
+        </tr>
+    </table>
+    <table border="0" cellspacing="1" cellpadding="0" width="750px" align="center">
+        <tr>
+            <th>序</th>
+            <th>名稱</th>
+            <th>型態</th>
+            <th>欄位</th>
+        </tr>
+        <tr>
+            <td width="20px" align="center">1</td>
+            <td width="250px">PK_EstimatedPushNotification</td>
+            <td width="150px">Clustered</td>
+            <td>Id<br /></td>
+        </tr>
+    </table><br />
+    <p style="page-break-after:always;"></p>
+    <br /><br /><br />
+    <table border="0" cellspacing="0" cellpadding="0" width="750px" align="center">
+        <tr>
+            <td align="right"><a href="#index">索引</a></td>
+        </tr>
+        <tr>
+            <th align="left">
+                <a name="Table:[dbo].[Group]"></a><b>Table:[dbo].[Group]</b></th>
+        </tr>
+    </table><br />
+    <table border="0" cellspacing="0" cellpadding="0" width="750px" align="center">
+        <tr>
+            <td><b>Description</b></td>
+        </tr>
+        <tr>
+            <td></td>
+        </tr>
+    </table><br />
+    <table border="0" cellspacing="0" cellpadding="0" width="750px" align="center">
+        <tr>
+            <td><b>資料表欄位</b></td>
+        </tr>
+    </table>
+    <table border="0" cellspacing="1" cellpadding="0" width="750px" align="center">
+        <tr>
+            <th>序</th>
+            <th>欄位名稱</th>
+            <th>資料型態</th>
+            <th>空值</th>
+            <th>說明</th>
+        </tr>
+        <tr>
+            <td width="20px" align="center">1</td>
+            <td width="250px">Id</td>
+            <td width="150px">INT</td>
+            <td width="50px" align="center">N</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td width="20px" align="center">2</td>
+            <td width="250px">GroupName</td>
+            <td width="150px">NVARCHAR(100)</td>
+            <td width="50px" align="center">Y</td>
+            <td>群駔名稱</td>
+        </tr>
+        <tr>
+            <td width="20px" align="center">3</td>
+            <td width="250px">IsActive</td>
+            <td width="150px">BIT</td>
+            <td width="50px" align="center">Y</td>
+            <td>是否活躍</td>
+        </tr>
+        <tr>
+            <td width="20px" align="center">4</td>
+            <td width="250px">CreateId</td>
+            <td width="150px">INT</td>
+            <td width="50px" align="center">N</td>
+            <td>建立者ID</td>
+        </tr>
+        <tr>
+            <td width="20px" align="center">5</td>
+            <td width="250px">CreateDate</td>
+            <td width="150px">DATETIME</td>
+            <td width="50px" align="center">N</td>
+            <td>建立日期</td>
+        </tr>
+        <tr>
+            <td width="20px" align="center">6</td>
+            <td width="250px">UpdateId</td>
+            <td width="150px">INT</td>
+            <td width="50px" align="center">Y</td>
+            <td>更新者ID</td>
+        </tr>
+        <tr>
+            <td width="20px" align="center">7</td>
+            <td width="250px">UpdateDate</td>
+            <td width="150px">DATETIME</td>
+            <td width="50px" align="center">Y</td>
+            <td>更新日期</td>
+        </tr>
+    </table><br />
+    <table border="0" cellspacing="0" cellpadding="0" width="750px" align="center">
+        <tr>
+            <td><b>索引</b></td>
+        </tr>
+    </table>
+    <table border="0" cellspacing="1" cellpadding="0" width="750px" align="center">
+        <tr>
+            <th>序</th>
+            <th>名稱</th>
+            <th>型態</th>
+            <th>欄位</th>
+        </tr>
+        <tr>
+            <td width="20px" align="center">1</td>
+            <td width="250px">PK_Group</td>
+            <td width="150px">Clustered</td>
+            <td>Id<br /></td>
+        </tr>
+    </table><br />
+    <p style="page-break-after:always;"></p>
+    <br /><br /><br />
+    <table border="0" cellspacing="0" cellpadding="0" width="750px" align="center">
+        <tr>
+            <td align="right"><a href="#index">索引</a></td>
+        </tr>
+        <tr>
+            <th align="left">
+                <a name="Table:[dbo].[Member]"></a><b>Table:[dbo].[Member]</b></th>
+        </tr>
+    </table><br />
+    <table border="0" cellspacing="0" cellpadding="0" width="750px" align="center">
+        <tr>
+            <td><b>Description</b></td>
+        </tr>
+        <tr>
+            <td></td>
+        </tr>
+    </table><br />
+    <table border="0" cellspacing="0" cellpadding="0" width="750px" align="center">
+        <tr>
+            <td><b>資料表欄位</b></td>
+        </tr>
+    </table>
+    <table border="0" cellspacing="1" cellpadding="0" width="750px" align="center">
+        <tr>
+            <th>序</th>
+            <th>欄位名稱</th>
+            <th>資料型態</th>
+            <th>空值</th>
+            <th>說明</th>
+        </tr>
+        <tr>
+            <td width="20px" align="center">1</td>
+            <td width="250px">Id</td>
+            <td width="150px">INT</td>
+            <td width="50px" align="center">N</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td width="20px" align="center">2</td>
+            <td width="250px">MemberId</td>
+            <td width="150px">INT</td>
+            <td width="50px" align="center">Y</td>
+            <td>會員ID</td>
+        </tr>
+        <tr>
+            <td width="20px" align="center">3</td>
+            <td width="250px">MemberName</td>
+            <td width="150px">NVARCHAR(100)</td>
+            <td width="50px" align="center">Y</td>
+            <td>會員名稱</td>
+        </tr>
+        <tr>
+            <td width="20px" align="center">4</td>
+            <td width="250px">PushToken</td>
+            <td width="150px">VARCHAR(200)</td>
+            <td width="50px" align="center">Y</td>
+            <td>手機Token</td>
+        </tr>
+        <tr>
+            <td width="20px" align="center">5</td>
+            <td width="250px">IsActive</td>
+            <td width="150px">BIT</td>
+            <td width="50px" align="center">Y</td>
+            <td>是否啟動(當為0時就表示不願接收推播)</td>
+        </tr>
+        <tr>
+            <td width="20px" align="center">6</td>
+            <td width="250px">CategoryId</td>
+            <td width="150px">INT</td>
+            <td width="50px" align="center">Y</td>
+            <td>會員靜態屬性</td>
+        </tr>
+        <tr>
+            <td width="20px" align="center">7</td>
+            <td width="250px">CreateId</td>
+            <td width="150px">INT</td>
+            <td width="50px" align="center">N</td>
+            <td>建立者ID</td>
+        </tr>
+        <tr>
+            <td width="20px" align="center">8</td>
+            <td width="250px">CreateDate</td>
+            <td width="150px">DATETIME</td>
+            <td width="50px" align="center">N</td>
+            <td>建立日期</td>
+        </tr>
+        <tr>
+            <td width="20px" align="center">9</td>
+            <td width="250px">UpdateId</td>
+            <td width="150px">INT</td>
+            <td width="50px" align="center">Y</td>
+            <td>更新者ID</td>
+        </tr>
+        <tr>
+            <td width="20px" align="center">10</td>
+            <td width="250px">UpdateDate</td>
+            <td width="150px">DATETIME</td>
+            <td width="50px" align="center">Y</td>
+            <td>更新日期</td>
+        </tr>
+    </table><br />
+    <table border="0" cellspacing="0" cellpadding="0" width="750px" align="center">
+        <tr>
+            <td><b>索引</b></td>
+        </tr>
+    </table>
+    <table border="0" cellspacing="1" cellpadding="0" width="750px" align="center">
+        <tr>
+            <th>序</th>
+            <th>名稱</th>
+            <th>型態</th>
+            <th>欄位</th>
+        </tr>
+        <tr>
+            <td width="20px" align="center">1</td>
+            <td width="250px">PK_Member</td>
+            <td width="150px">Clustered</td>
+            <td>Id<br /></td>
+        </tr>
+    </table><br />
+    <p style="page-break-after:always;"></p>
+    <br /><br /><br />
+    <table border="0" cellspacing="0" cellpadding="0" width="750px" align="center">
+        <tr>
+            <td align="right"><a href="#index">索引</a></td>
+        </tr>
+        <tr>
+            <th align="left">
+                <a name="Table:[dbo].[MemberCategory]"></a><b>Table:[dbo].[MemberCategory]</b></th>
+        </tr>
+    </table><br />
+    <table border="0" cellspacing="0" cellpadding="0" width="750px" align="center">
+        <tr>
+            <td><b>Description</b></td>
+        </tr>
+        <tr>
+            <td></td>
+        </tr>
+    </table><br />
+    <table border="0" cellspacing="0" cellpadding="0" width="750px" align="center">
+        <tr>
+            <td><b>資料表欄位</b></td>
+        </tr>
+    </table>
+    <table border="0" cellspacing="1" cellpadding="0" width="750px" align="center">
+        <tr>
+            <th>序</th>
+            <th>欄位名稱</th>
+            <th>資料型態</th>
+            <th>空值</th>
+            <th>說明</th>
+        </tr>
+        <tr>
+            <td width="20px" align="center">1</td>
+            <td width="250px">Id</td>
+            <td width="150px">INT</td>
+            <td width="50px" align="center">N</td>
+            <td>ID</td>
+        </tr>
+        <tr>
+            <td width="20px" align="center">2</td>
+            <td width="250px">CategoryName</td>
+            <td width="150px">NVARCHAR(100)</td>
+            <td width="50px" align="center">Y</td>
+            <td>會員類別</td>
+        </tr>
+        <tr>
+            <td width="20px" align="center">3</td>
+            <td width="250px">CreateId</td>
+            <td width="150px">INT</td>
+            <td width="50px" align="center">N</td>
+            <td>建立者ID</td>
+        </tr>
+        <tr>
+            <td width="20px" align="center">4</td>
+            <td width="250px">CreateDate</td>
+            <td width="150px">DATETIME</td>
+            <td width="50px" align="center">N</td>
+            <td>建立者日期</td>
+        </tr>
+        <tr>
+            <td width="20px" align="center">5</td>
+            <td width="250px">UpdateId</td>
+            <td width="150px">INT</td>
+            <td width="50px" align="center">Y</td>
+            <td>更新者ID</td>
+        </tr>
+        <tr>
+            <td width="20px" align="center">6</td>
+            <td width="250px">UpdateDate</td>
+            <td width="150px">DATETIME</td>
+            <td width="50px" align="center">Y</td>
+            <td>更新日期</td>
+        </tr>
+    </table><br />
+    <table border="0" cellspacing="0" cellpadding="0" width="750px" align="center">
+        <tr>
+            <td><b>索引</b></td>
+        </tr>
+    </table>
+    <table border="0" cellspacing="1" cellpadding="0" width="750px" align="center">
+        <tr>
+            <th>序</th>
+            <th>名稱</th>
+            <th>型態</th>
+            <th>欄位</th>
+        </tr>
+        <tr>
+            <td width="20px" align="center">1</td>
+            <td width="250px">PK_MemberCategory</td>
+            <td width="150px">Clustered</td>
+            <td>Id<br /></td>
+        </tr>
+    </table><br />
+    <p style="page-break-after:always;"></p>
+    <br /><br /><br />
+    <table border="0" cellspacing="0" cellpadding="0" width="750px" align="center">
+        <tr>
+            <td align="right"><a href="#index">索引</a></td>
+        </tr>
+        <tr>
+            <th align="left">
+                <a name="Table:[dbo].[MemberGroup]"></a><b>Table:[dbo].[MemberGroup]</b></th>
+        </tr>
+    </table><br />
+    <table border="0" cellspacing="0" cellpadding="0" width="750px" align="center">
+        <tr>
+            <td><b>Description</b></td>
+        </tr>
+        <tr>
+            <td></td>
+        </tr>
+    </table><br />
+    <table border="0" cellspacing="0" cellpadding="0" width="750px" align="center">
+        <tr>
+            <td><b>資料表欄位</b></td>
+        </tr>
+    </table>
+    <table border="0" cellspacing="1" cellpadding="0" width="750px" align="center">
+        <tr>
+            <th>序</th>
+            <th>欄位名稱</th>
+            <th>資料型態</th>
+            <th>空值</th>
+            <th>說明</th>
+        </tr>
+        <tr>
+            <td width="20px" align="center">1</td>
+            <td width="250px">Id</td>
+            <td width="150px">INT</td>
+            <td width="50px" align="center">N</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td width="20px" align="center">2</td>
+            <td width="250px">MemberId</td>
+            <td width="150px">INT</td>
+            <td width="50px" align="center">Y</td>
+            <td>會員ID</td>
+        </tr>
+        <tr>
+            <td width="20px" align="center">3</td>
+            <td width="250px">GroupId</td>
+            <td width="150px">INT</td>
+            <td width="50px" align="center">Y</td>
+            <td>群駔ID</td>
+        </tr>
+        <tr>
+            <td width="20px" align="center">4</td>
+            <td width="250px">CreateId</td>
+            <td width="150px">INT</td>
+            <td width="50px" align="center">N</td>
+            <td>建立者ID</td>
+        </tr>
+        <tr>
+            <td width="20px" align="center">5</td>
+            <td width="250px">CreateDate</td>
+            <td width="150px">DATETIME</td>
+            <td width="50px" align="center">N</td>
+            <td>建立者日期</td>
+        </tr>
+        <tr>
+            <td width="20px" align="center">6</td>
+            <td width="250px">UpdateId</td>
+            <td width="150px">INT</td>
+            <td width="50px" align="center">Y</td>
+            <td>更新者ID</td>
+        </tr>
+        <tr>
+            <td width="20px" align="center">7</td>
+            <td width="250px">UpdateDate</td>
+            <td width="150px">DATETIME</td>
+            <td width="50px" align="center">Y</td>
+            <td>更新日期</td>
+        </tr>
+    </table><br />
+    <table border="0" cellspacing="0" cellpadding="0" width="750px" align="center">
+        <tr>
+            <td><b>索引</b></td>
+        </tr>
+    </table>
+    <table border="0" cellspacing="1" cellpadding="0" width="750px" align="center">
+        <tr>
+            <th>序</th>
+            <th>名稱</th>
+            <th>型態</th>
+            <th>欄位</th>
+        </tr>
+        <tr>
+            <td width="20px" align="center">1</td>
+            <td width="250px">PK_MemberGroup</td>
+            <td width="150px">Clustered</td>
+            <td>Id<br /></td>
+        </tr>
+    </table><br />
+    <p style="page-break-after:always;"></p>
+    <br /><br /><br />
+    <table border="0" cellspacing="0" cellpadding="0" width="750px" align="center">
+        <tr>
+            <td align="right"><a href="#index">索引</a></td>
+        </tr>
+        <tr>
+            <th align="left">
+                <a name="Table:[dbo].[MemberNotification]"></a><b>Table:[dbo].[MemberNotification]</b></th>
+        </tr>
+    </table><br />
+    <table border="0" cellspacing="0" cellpadding="0" width="750px" align="center">
+        <tr>
+            <td><b>Description</b></td>
+        </tr>
+        <tr>
+            <td></td>
+        </tr>
+    </table><br />
+    <table border="0" cellspacing="0" cellpadding="0" width="750px" align="center">
+        <tr>
+            <td><b>資料表欄位</b></td>
+        </tr>
+    </table>
+    <table border="0" cellspacing="1" cellpadding="0" width="750px" align="center">
+        <tr>
+            <th>序</th>
+            <th>欄位名稱</th>
+            <th>資料型態</th>
+            <th>空值</th>
+            <th>說明</th>
+        </tr>
+        <tr>
+            <td width="20px" align="center">1</td>
+            <td width="250px">Id</td>
+            <td width="150px">INT</td>
+            <td width="50px" align="center">N</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td width="20px" align="center">2</td>
+            <td width="250px">MemberId</td>
+            <td width="150px">INT</td>
+            <td width="50px" align="center">Y</td>
+            <td>會員ID</td>
+        </tr>
+        <tr>
+            <td width="20px" align="center">3</td>
+            <td width="250px">PushNotificationId</td>
+            <td width="150px">INT</td>
+            <td width="50px" align="center">Y</td>
+            <td>推播ID</td>
+        </tr>
+        <tr>
+            <td width="20px" align="center">4</td>
+            <td width="250px">IsRead</td>
+            <td width="150px">BIT</td>
+            <td width="50px" align="center">Y</td>
+            <td>是否讀取</td>
+        </tr>
+        <tr>
+            <td width="20px" align="center">5</td>
+            <td width="250px">CreateId</td>
+            <td width="150px">INT</td>
+            <td width="50px" align="center">N</td>
+            <td>建立者ID</td>
+        </tr>
+        <tr>
+            <td width="20px" align="center">6</td>
+            <td width="250px">CreateDate</td>
+            <td width="150px">DATETIME</td>
+            <td width="50px" align="center">N</td>
+            <td>建立者日期</td>
+        </tr>
+        <tr>
+            <td width="20px" align="center">7</td>
+            <td width="250px">UpdateId</td>
+            <td width="150px">INT</td>
+            <td width="50px" align="center">Y</td>
+            <td>更新者ID</td>
+        </tr>
+        <tr>
+            <td width="20px" align="center">8</td>
+            <td width="250px">UpdateDate</td>
+            <td width="150px">DATETIME</td>
+            <td width="50px" align="center">Y</td>
+            <td>更新日期</td>
+        </tr>
+    </table><br />
+    <table border="0" cellspacing="0" cellpadding="0" width="750px" align="center">
+        <tr>
+            <td><b>索引</b></td>
+        </tr>
+    </table>
+    <table border="0" cellspacing="1" cellpadding="0" width="750px" align="center">
+        <tr>
+            <th>序</th>
+            <th>名稱</th>
+            <th>型態</th>
+            <th>欄位</th>
+        </tr>
+        <tr>
+            <td width="20px" align="center">1</td>
+            <td width="250px">PK_MemberNotification</td>
+            <td width="150px">Clustered</td>
+            <td>Id<br /></td>
+        </tr>
+    </table><br />
+    <p style="page-break-after:always;"></p>
+    <br /><br /><br />
+    <table border="0" cellspacing="0" cellpadding="0" width="750px" align="center">
+        <tr>
+            <td align="right"><a href="#index">索引</a></td>
+        </tr>
+        <tr>
+            <th align="left">
+                <a name="Table:[dbo].[MemberTag]"></a><b>Table:[dbo].[MemberTag]</b></th>
+        </tr>
+    </table><br />
+    <table border="0" cellspacing="0" cellpadding="0" width="750px" align="center">
+        <tr>
+            <td><b>Description</b></td>
+        </tr>
+        <tr>
+            <td></td>
+        </tr>
+    </table><br />
+    <table border="0" cellspacing="0" cellpadding="0" width="750px" align="center">
+        <tr>
+            <td><b>資料表欄位</b></td>
+        </tr>
+    </table>
+    <table border="0" cellspacing="1" cellpadding="0" width="750px" align="center">
+        <tr>
+            <th>序</th>
+            <th>欄位名稱</th>
+            <th>資料型態</th>
+            <th>空值</th>
+            <th>說明</th>
+        </tr>
+        <tr>
+            <td width="20px" align="center">1</td>
+            <td width="250px">Id</td>
+            <td width="150px">INT</td>
+            <td width="50px" align="center">N</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td width="20px" align="center">2</td>
+            <td width="250px">TagId</td>
+            <td width="150px">INT</td>
+            <td width="50px" align="center">Y</td>
+            <td>標籤ID</td>
+        </tr>
+        <tr>
+            <td width="20px" align="center">3</td>
+            <td width="250px">TagName</td>
+            <td width="150px">NVARCHAR(100)</td>
+            <td width="50px" align="center">Y</td>
+            <td>標籤名稱</td>
+        </tr>
+        <tr>
+            <td width="20px" align="center">4</td>
+            <td width="250px">CreateId</td>
+            <td width="150px">INT</td>
+            <td width="50px" align="center">N</td>
+            <td>建立者ID</td>
+        </tr>
+        <tr>
+            <td width="20px" align="center">5</td>
+            <td width="250px">CreateDate</td>
+            <td width="150px">DATETIME</td>
+            <td width="50px" align="center">N</td>
+            <td>建立者日期</td>
+        </tr>
+        <tr>
+            <td width="20px" align="center">6</td>
+            <td width="250px">UpdateId</td>
+            <td width="150px">INT</td>
+            <td width="50px" align="center">Y</td>
+            <td>更新者ID</td>
+        </tr>
+        <tr>
+            <td width="20px" align="center">7</td>
+            <td width="250px">UpdateDate</td>
+            <td width="150px">DATETIME</td>
+            <td width="50px" align="center">Y</td>
+            <td>更新日期</td>
+        </tr>
+    </table><br />
+    <table border="0" cellspacing="0" cellpadding="0" width="750px" align="center">
+        <tr>
+            <td><b>索引</b></td>
+        </tr>
+    </table>
+    <table border="0" cellspacing="1" cellpadding="0" width="750px" align="center">
+        <tr>
+            <th>序</th>
+            <th>名稱</th>
+            <th>型態</th>
+            <th>欄位</th>
+        </tr>
+        <tr>
+            <td width="20px" align="center">1</td>
+            <td width="250px">PK_MemberTag</td>
+            <td width="150px">Clustered</td>
+            <td>Id<br /></td>
+        </tr>
+    </table><br />
+    <p style="page-break-after:always;"></p>
+    <br /><br /><br />
+    <table border="0" cellspacing="0" cellpadding="0" width="750px" align="center">
+        <tr>
+            <td align="right"><a href="#index">索引</a></td>
+        </tr>
+        <tr>
+            <th align="left">
+                <a name="Table:[dbo].[MemberTagMapping]"></a><b>Table:[dbo].[MemberTagMapping]</b></th>
+        </tr>
+    </table><br />
+    <table border="0" cellspacing="0" cellpadding="0" width="750px" align="center">
+        <tr>
+            <td><b>Description</b></td>
+        </tr>
+        <tr>
+            <td></td>
+        </tr>
+    </table><br />
+    <table border="0" cellspacing="0" cellpadding="0" width="750px" align="center">
+        <tr>
+            <td><b>資料表欄位</b></td>
+        </tr>
+    </table>
+    <table border="0" cellspacing="1" cellpadding="0" width="750px" align="center">
+        <tr>
+            <th>序</th>
+            <th>欄位名稱</th>
+            <th>資料型態</th>
+            <th>空值</th>
+            <th>說明</th>
+        </tr>
+        <tr>
+            <td width="20px" align="center">1</td>
+            <td width="250px">Id</td>
+            <td width="150px">INT</td>
+            <td width="50px" align="center">N</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td width="20px" align="center">2</td>
+            <td width="250px">MemberId</td>
+            <td width="150px">INT</td>
+            <td width="50px" align="center">Y</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td width="20px" align="center">3</td>
+            <td width="250px">TagId</td>
+            <td width="150px">INT</td>
+            <td width="50px" align="center">Y</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td width="20px" align="center">4</td>
+            <td width="250px">CreateId</td>
+            <td width="150px">INT</td>
+            <td width="50px" align="center">N</td>
+            <td>建立者ID</td>
+        </tr>
+        <tr>
+            <td width="20px" align="center">5</td>
+            <td width="250px">CreateDate</td>
+            <td width="150px">DATETIME</td>
+            <td width="50px" align="center">N</td>
+            <td>建立者日期</td>
+        </tr>
+        <tr>
+            <td width="20px" align="center">6</td>
+            <td width="250px">UpdateId</td>
+            <td width="150px">INT</td>
+            <td width="50px" align="center">Y</td>
+            <td>更新者ID</td>
+        </tr>
+        <tr>
+            <td width="20px" align="center">7</td>
+            <td width="250px">UpdateDate</td>
+            <td width="150px">DATETIME</td>
+            <td width="50px" align="center">Y</td>
+            <td>更新日期</td>
+        </tr>
+    </table><br />
+    <table border="0" cellspacing="0" cellpadding="0" width="750px" align="center">
+        <tr>
+            <td><b>索引</b></td>
+        </tr>
+    </table>
+    <table border="0" cellspacing="1" cellpadding="0" width="750px" align="center">
+        <tr>
+            <th>序</th>
+            <th>名稱</th>
+            <th>型態</th>
+            <th>欄位</th>
+        </tr>
+        <tr>
+            <td width="20px" align="center">1</td>
+            <td width="250px">PK_MemberTagMapping</td>
+            <td width="150px">Clustered</td>
+            <td>Id<br /></td>
+        </tr>
+    </table><br />
+    <p style="page-break-after:always;"></p>
+    <br /><br /><br />
+    <table border="0" cellspacing="0" cellpadding="0" width="750px" align="center">
+        <tr>
+            <td align="right"><a href="#index">索引</a></td>
+        </tr>
+        <tr>
+            <th align="left">
+                <a name="Table:[dbo].[PushNotificationDetail]"></a><b>Table:[dbo].[PushNotificationDetail]</b></th>
+        </tr>
+    </table><br />
+    <table border="0" cellspacing="0" cellpadding="0" width="750px" align="center">
+        <tr>
+            <td><b>Description</b></td>
+        </tr>
+        <tr>
+            <td></td>
+        </tr>
+    </table><br />
+    <table border="0" cellspacing="0" cellpadding="0" width="750px" align="center">
+        <tr>
+            <td><b>資料表欄位</b></td>
+        </tr>
+    </table>
+    <table border="0" cellspacing="1" cellpadding="0" width="750px" align="center">
+        <tr>
+            <th>序</th>
+            <th>欄位名稱</th>
+            <th>資料型態</th>
+            <th>空值</th>
+            <th>說明</th>
+        </tr>
+        <tr>
+            <td width="20px" align="center">1</td>
+            <td width="250px">Id</td>
+            <td width="150px">INT</td>
+            <td width="50px" align="center">N</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td width="20px" align="center">2</td>
+            <td width="250px">PushNotificationId</td>
+            <td width="150px">INT</td>
+            <td width="50px" align="center">Y</td>
+            <td>推播ID</td>
+        </tr>
+        <tr>
+            <td width="20px" align="center">3</td>
+            <td width="250px">MemberId</td>
+            <td width="150px">INT</td>
+            <td width="50px" align="center">Y</td>
+            <td>會員ID</td>
+        </tr>
+        <tr>
+            <td width="20px" align="center">4</td>
+            <td width="250px">PushToken</td>
+            <td width="150px">VARCHAR(200)</td>
+            <td width="50px" align="center">Y</td>
+            <td>推播Token</td>
+        </tr>
+        <tr>
+            <td width="20px" align="center">5</td>
+            <td width="250px">CreateId</td>
+            <td width="150px">INT</td>
+            <td width="50px" align="center">N</td>
+            <td>建立者ID</td>
+        </tr>
+        <tr>
+            <td width="20px" align="center">6</td>
+            <td width="250px">CreateDate</td>
+            <td width="150px">DATETIME</td>
+            <td width="50px" align="center">N</td>
+            <td>建立者日期</td>
+        </tr>
+        <tr>
+            <td width="20px" align="center">7</td>
+            <td width="250px">UpdateId</td>
+            <td width="150px">INT</td>
+            <td width="50px" align="center">Y</td>
+            <td>更新者ID</td>
+        </tr>
+        <tr>
+            <td width="20px" align="center">8</td>
+            <td width="250px">UpdateDate</td>
+            <td width="150px">DATETIME</td>
+            <td width="50px" align="center">Y</td>
+            <td>更新日期</td>
+        </tr>
+    </table><br />
+    <table border="0" cellspacing="0" cellpadding="0" width="750px" align="center">
+        <tr>
+            <td><b>索引</b></td>
+        </tr>
+    </table>
+    <table border="0" cellspacing="1" cellpadding="0" width="750px" align="center">
+        <tr>
+            <th>序</th>
+            <th>名稱</th>
+            <th>型態</th>
+            <th>欄位</th>
+        </tr>
+        <tr>
+            <td width="20px" align="center">1</td>
+            <td width="250px">PK_PushNotifucationDetail</td>
+            <td width="150px">Clustered</td>
+            <td>Id<br /></td>
+        </tr>
+    </table><br />
+    <p style="page-break-after:always;"></p>
+    <br /><br /><br />
+    <table border="0" cellspacing="0" cellpadding="0" width="750px" align="center">
+        <tr>
+            <td align="right"><a href="#index">索引</a></td>
+        </tr>
+        <tr>
+            <th align="left">
+                <a name="Table:[dbo].[PushNotificationMaster]"></a><b>Table:[dbo].[PushNotificationMaster]</b></th>
+        </tr>
+    </table><br />
+    <table border="0" cellspacing="0" cellpadding="0" width="750px" align="center">
+        <tr>
+            <td><b>Description</b></td>
+        </tr>
+        <tr>
+            <td></td>
+        </tr>
+    </table><br />
+    <table border="0" cellspacing="0" cellpadding="0" width="750px" align="center">
+        <tr>
+            <td><b>資料表欄位</b></td>
+        </tr>
+    </table>
+    <table border="0" cellspacing="1" cellpadding="0" width="750px" align="center">
+        <tr>
+            <th>序</th>
+            <th>欄位名稱</th>
+            <th>資料型態</th>
+            <th>空值</th>
+            <th>說明</th>
+        </tr>
+        <tr>
+            <td width="20px" align="center">1</td>
+            <td width="250px">Id</td>
+            <td width="150px">INT</td>
+            <td width="50px" align="center">N</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td width="20px" align="center">2</td>
+            <td width="250px">Title</td>
+            <td width="150px">NVARCHAR(100)</td>
+            <td width="50px" align="center">N</td>
+            <td>抬頭</td>
+        </tr>
+        <tr>
+            <td width="20px" align="center">3</td>
+            <td width="250px">Body</td>
+            <td width="150px">NVARCHAR(100)</td>
+            <td width="50px" align="center">N</td>
+            <td>堆播主題</td>
+        </tr>
+        <tr>
+            <td width="20px" align="center">4</td>
+            <td width="250px">PushContent</td>
+            <td width="150px">NVARCHAR(1000)</td>
+            <td width="50px" align="center">N</td>
+            <td>堆播內容</td>
+        </tr>
+        <tr>
+            <td width="20px" align="center">5</td>
+            <td width="250px">Image</td>
+            <td width="150px">VARCHAR(100)</td>
+            <td width="50px" align="center">Y</td>
+            <td>影像</td>
+        </tr>
+        <tr>
+            <td width="20px" align="center">6</td>
+            <td width="250px">PushDateTime</td>
+            <td width="150px">DATETIME</td>
+            <td width="50px" align="center">Y</td>
+            <td>推播時間</td>
+        </tr>
+        <tr>
+            <td width="20px" align="center">7</td>
+            <td width="250px">IsPush</td>
+            <td width="150px">BIT</td>
+            <td width="50px" align="center">Y</td>
+            <td>是否推播</td>
+        </tr>
+        <tr>
+            <td width="20px" align="center">8</td>
+            <td width="250px">CreateId</td>
+            <td width="150px">INT</td>
+            <td width="50px" align="center">N</td>
+            <td>建立者ID</td>
+        </tr>
+        <tr>
+            <td width="20px" align="center">9</td>
+            <td width="250px">CreateDate</td>
+            <td width="150px">DATETIME</td>
+            <td width="50px" align="center">N</td>
+            <td>建立者日期</td>
+        </tr>
+        <tr>
+            <td width="20px" align="center">10</td>
+            <td width="250px">UpdateId</td>
+            <td width="150px">INT</td>
+            <td width="50px" align="center">Y</td>
+            <td>更新者ID</td>
+        </tr>
+        <tr>
+            <td width="20px" align="center">11</td>
+            <td width="250px">UpdateDate</td>
+            <td width="150px">DATETIME</td>
+            <td width="50px" align="center">Y</td>
+            <td>更新日期</td>
+        </tr>
+    </table><br />
+    <table border="0" cellspacing="0" cellpadding="0" width="750px" align="center">
+        <tr>
+            <td><b>索引</b></td>
+        </tr>
+    </table>
+    <table border="0" cellspacing="1" cellpadding="0" width="750px" align="center">
+        <tr>
+            <th>序</th>
+            <th>名稱</th>
+            <th>型態</th>
+            <th>欄位</th>
+        </tr>
+        <tr>
+            <td width="20px" align="center">1</td>
+            <td width="250px">PK_PushNotificationMaster</td>
+            <td width="150px">Clustered</td>
+            <td>Id<br /></td>
+        </tr>
+    </table><br />
+    <p style="page-break-after:always;"></p>
+    <br /><br /><br />
+    <table border="0" cellspacing="0" cellpadding="0" width="750px" align="center">
+        <tr>
+            <td align="right"><a href="#index">索引</a></td>
+        </tr>
+        <tr>
+            <th align="left">
+                <a name="Table:[dbo].[PushNotificationTag]"></a><b>Table:[dbo].[PushNotificationTag]</b></th>
+        </tr>
+    </table><br />
+    <table border="0" cellspacing="0" cellpadding="0" width="750px" align="center">
+        <tr>
+            <td><b>Description</b></td>
+        </tr>
+        <tr>
+            <td></td>
+        </tr>
+    </table><br />
+    <table border="0" cellspacing="0" cellpadding="0" width="750px" align="center">
+        <tr>
+            <td><b>資料表欄位</b></td>
+        </tr>
+    </table>
+    <table border="0" cellspacing="1" cellpadding="0" width="750px" align="center">
+        <tr>
+            <th>序</th>
+            <th>欄位名稱</th>
+            <th>資料型態</th>
+            <th>空值</th>
+            <th>說明</th>
+        </tr>
+        <tr>
+            <td width="20px" align="center">1</td>
+            <td width="250px">Id</td>
+            <td width="150px">INT</td>
+            <td width="50px" align="center">N</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td width="20px" align="center">2</td>
+            <td width="250px">PushNotificationId</td>
+            <td width="150px">INT</td>
+            <td width="50px" align="center">Y</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td width="20px" align="center">3</td>
+            <td width="250px">TagId</td>
+            <td width="150px">INT</td>
+            <td width="50px" align="center">Y</td>
+            <td>TagId</td>
+        </tr>
+        <tr>
+            <td width="20px" align="center">4</td>
+            <td width="250px">CreateId</td>
+            <td width="150px">INT</td>
+            <td width="50px" align="center">N</td>
+            <td>建立者ID</td>
+        </tr>
+        <tr>
+            <td width="20px" align="center">5</td>
+            <td width="250px">CreateDate</td>
+            <td width="150px">DATETIME</td>
+            <td width="50px" align="center">N</td>
+            <td>建立者日期</td>
+        </tr>
+        <tr>
+            <td width="20px" align="center">6</td>
+            <td width="250px">UpdateId</td>
+            <td width="150px">INT</td>
+            <td width="50px" align="center">Y</td>
+            <td>更新者ID</td>
+        </tr>
+        <tr>
+            <td width="20px" align="center">7</td>
+            <td width="250px">UpdateDate</td>
+            <td width="150px">DATETIME</td>
+            <td width="50px" align="center">Y</td>
+            <td>更新日期</td>
+        </tr>
+    </table><br />
+    <table border="0" cellspacing="0" cellpadding="0" width="750px" align="center">
+        <tr>
+            <td><b>索引</b></td>
+        </tr>
+    </table>
+    <table border="0" cellspacing="1" cellpadding="0" width="750px" align="center">
+        <tr>
+            <th>序</th>
+            <th>名稱</th>
+            <th>型態</th>
+            <th>欄位</th>
+        </tr>
+        <tr>
+            <td width="20px" align="center">1</td>
+            <td width="250px">PK_PushNotificationTag</td>
+            <td width="150px">Clustered</td>
+            <td>Id<br /></td>
+        </tr>
+    </table><br />
+</body>
+
+</html>

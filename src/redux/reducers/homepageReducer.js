@@ -6,19 +6,15 @@ import {
 
 const initialState = {
   pageName: "Home",
-  homeSelected: DefaultDestination,
-  aboutusSelected: [],
-  serviceSelected: [],
-  source: DefaultSource,
+  pagesSelected: DefaultDestination,
 };
 
 export default function homepageReducer(state = initialState, action) {
-  // console.log(action);
   switch (action.type) {
     case HOMECOMPONENTS.GET_HOME_PAGE_COMPONENTS:
       return {
         ...state,
-        homeSelected: action.selectDestination,
+        pagesSelected: action.selectDestination,
         homeSource: action.selectSource ? action.selectSource : DefaultSource,
       };
 
@@ -27,14 +23,14 @@ export default function homepageReducer(state = initialState, action) {
 
       return {
         ...state,
-        homeSelected: action.selectDestination,
+        pagesSelected: action.selectDestination,
         homesource: action.selectSource ? action.selectSource : DefaultSource,
       };
 
     case HOMECOMPONENTS.UPDATE_DESTINATION_COMPONENTS:
       return {
         ...state,
-        homeSelected: action.selectDestination,
+        pagesSelected: action.selectDestination,
         homesource: action.selectSource ? action.selectSource : DefaultSource,
       };
 

@@ -3,10 +3,13 @@ import { PersistGate } from "redux-persist/lib/integration/react";
 import { persistor, store } from "../redux/store";
 import { ToastContainer } from "react-toastify";
 import ScrollToTop from "react-scroll-to-top";
+import { addLocaleData } from "react-intl";
 
 import "../styles/styles.scss";
 import Loading from "../components/Other/Loading";
 import withReduxStore from "../common/with-redux-store";
+import AppProvider from "./AppProvider";
+
 // import "assets/css/nextjs-material-dashboard.css?v=1.0.0";
 /*
   Next.js使用App組件來初始化頁面 
@@ -50,7 +53,9 @@ const App = ({ Component, pageProps, reduxStore }) => {
   return (
     <Provider store={reduxStore}>
       <PersistGate loading={<Loading />} persistor={persistor}>
-        <Component {...pageProps} />
+        <AppProvider>
+          <Component {...pageProps} />
+        </AppProvider>
         <ToastContainer position="bottom-left" autoClose={1500} />
         <ScrollToTop
           smooth

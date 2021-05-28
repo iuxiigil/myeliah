@@ -6,10 +6,11 @@ import { getProducts } from "../../../../common/productSelect";
 import { NextArrow, PrevArrow } from "../../../Other/SliderArrow";
 import Button from "../../../Control/Button";
 import ProductSlider from "../Elements/ProductSlider";
+// import multilingual from "../../../../common/multilingual";
 
 const categories = ["All", "Eyes", "Face", "Lips"];
 
-export default function ProductTabSlideOne({ data }) {
+export default function ProductTabSlideOne({ data, multilingual }) {
   const settings = {
     centerMode: true,
     centerPadding: "250px",
@@ -57,7 +58,7 @@ export default function ProductTabSlideOne({ data }) {
     <div className="product-tab-slide">
       <div className="container">
         <div className="product-tab-slide__header">
-          <h5>New arrivals</h5>
+          <h5>{multilingual("content.NewArrivals")}</h5>
           <div className="product-tab-slide__header__controller">
             <ul>
               {categories.map((category, index) => (
