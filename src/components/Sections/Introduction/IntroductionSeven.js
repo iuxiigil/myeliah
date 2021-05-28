@@ -16,16 +16,13 @@ export default function IntroductionSeven({ data }) {
             <div className="row no-gutters">
               <div className="col-12 col-lg-9 col-xl-6">
                 <div className="introduction-seven__wrapper__content__detail">
-                  <h5>Put it in Neutral</h5>
+                  <h5>純天然煉製</h5>
                   <SectionTitleOne hideDecoration spaceBottom="1.2em">
-                    Enlightened Beauty
+                    美麗動人
                   </SectionTitleOne>
                   <h3>$125.00</h3>
                   <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Quis ipsum suspendisse ultrices gravida lacus vel
-                    facilisis.{" "}
+                    工作越來越忙碌、生活中的責任越來越大、壓力、勞累理所當然也跟著累積，您知道嗎？其實，疲勞不只會顯現在身體上，肌膚狀態、臉色，更會直接顯示出您的狼狽唷！頂級養護產品，透過美容師溫柔的雙手，層層塗抹滲透肌膚，為乾燥枯黃的面容，補足缺失的養份與水份，讓臉龐找回失去以久的彈潤透亮～{" "}
                   </p>
                   <Button
                     action={process.env.PUBLIC_URL + "#"}
@@ -63,7 +60,7 @@ export default function IntroductionSeven({ data }) {
               <div className="col-12 col-lg-9 col-xl-6 ml-auto">
                 <div className="introduction-seven__wrapper__content__detail">
                   <SectionTitleOne hideDecoration spaceBottom="1.2em">
-                    User Instructions
+                    使用說明
                   </SectionTitleOne>
                   <Accordion
                     defaultActiveKey={parseInt(currentAccordionIndex)}

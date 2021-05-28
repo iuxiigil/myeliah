@@ -11,13 +11,13 @@ export default function IntroductionFour() {
                 <div className="introduction-four__item -style-1">
                   <div className="introduction-four__item__content">
                     <h3>
-                      Meet <span>trends</span>
+                      適合 <span>當季</span>
                     </h3>
-                    <h5>of the season</h5>
+                    <h5>趨勢</h5>
                     <Link
                       href={process.env.PUBLIC_URL + "/shop/fullwidth-4col"}
                     >
-                      <a className="btn -transparent -underline">Shop Now</a>
+                      <a className="btn -transparent -underline">購物去</a>
                     </Link>
                   </div>
                   <div className="introduction-four__item__image">
@@ -26,7 +26,7 @@ export default function IntroductionFour() {
                         process.env.PUBLIC_URL +
                         "/assets/images/introduction/IntroductionFour/1.png"
                       }
-                      alt="Meet trends of the season"
+                      alt="適應季節趨勢"
                     />
                   </div>
                 </div>
@@ -37,11 +37,11 @@ export default function IntroductionFour() {
                     <h3>
                       Skin <span>2.0</span>
                     </h3>
-                    <h5>Your regimen upgraded</h5>
+                    <h5>養生方式升級</h5>
                     <Link
                       href={process.env.PUBLIC_URL + "/shop/fullwidth-4col"}
                     >
-                      <a className="btn -transparent -underline">Shop Now</a>
+                      <a className="btn -transparent -underline">購物去</a>
                     </Link>
                   </div>
                   <div className="introduction-four__item__image">
@@ -50,7 +50,7 @@ export default function IntroductionFour() {
                         process.env.PUBLIC_URL +
                         "/assets/images/introduction/IntroductionFour/2.png"
                       }
-                      alt="Meet trends of the season"
+                      alt="適應季節趨勢"
                     />
                   </div>
                 </div>
@@ -63,13 +63,13 @@ export default function IntroductionFour() {
                 <div className="introduction-four__item -style-3">
                   <div className="introduction-four__item__content">
                     <h3>
-                      <span>Alima</span>
+                      <span>阿利馬</span>
                     </h3>
-                    <h5>Matte Collection</h5>
+                    <h5>雅光系列</h5>
                     <Link
                       href={process.env.PUBLIC_URL + "/shop/fullwidth-4col"}
                     >
-                      <a className="btn -transparent -underline">Shop Now</a>
+                      <a className="btn -transparent -underline">購物去</a>
                     </Link>
                   </div>
                   <div className="introduction-four__item__image">
@@ -87,13 +87,13 @@ export default function IntroductionFour() {
                 <div className="introduction-four__item -style-4">
                   <div className="introduction-four__item__content">
                     <h3>
-                      Up to <span>70%</span> off
+                      以上 <span>70%</span> 折扣
                     </h3>
-                    <h5>Limited time only</h5>
+                    <h5>活動即將結束</h5>
                     <Link
                       href={process.env.PUBLIC_URL + "/shop/fullwidth-4col"}
                     >
-                      <a className="btn -transparent -underline">Shop Now</a>
+                      <a className="btn -transparent -underline">購物去</a>
                     </Link>
                   </div>
                   <div className="introduction-four__item__image">

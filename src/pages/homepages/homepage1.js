@@ -1,15 +1,8 @@
-import LayoutOne from "../../components/Layout/LayoutOne";
-
-import {
-  DefaultDestination,
-  DefaultSource,
-} from "../../common/componentsSets/HomepageSets";
-
+import { DefaultDestination } from "../../common/componentsSets/HomepageSets";
 import { useSelector } from "react-redux";
+import MainLayout1 from "./MainLayout1";
 
-let customerDestination = [];
 let customerSelect = [];
-let layoutScreen;
 
 export default function homepage1() {
   customerSelect = useSelector((state) =>
@@ -17,21 +10,6 @@ export default function homepage1() {
       ? state.homepageReducer.homeSelected
       : DefaultDestination
   );
-  // console.log(customerSelect);
-  customerDestination = [];
-  customerSelect.map((comp, _key1) => {
-    DefaultSource.map((item, _key2) => {
-      if (item.id === comp.id) customerDestination.push(item);
-    });
-  });
 
-  layoutScreen = customerDestination.map((comp) => {
-    return comp.comName;
-  });
-
-  return (
-    <LayoutOne title="美麗佳人-1" className="-style-1">
-      {layoutScreen}
-    </LayoutOne>
-  );
+  return <MainLayout1 Data={customerSelect.Home} Title="首頁" />;
 }

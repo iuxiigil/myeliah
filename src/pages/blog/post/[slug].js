@@ -11,7 +11,7 @@ export default function () {
   const router = useRouter();
   const { slug } = router.query;
   const foundPost = getPostBySlug(data, slug);
-  // console.log(foundPost);
+
   const myseo1 = {
     title: foundPost.title,
     description: foundPost.description,

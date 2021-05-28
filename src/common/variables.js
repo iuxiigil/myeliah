@@ -3,7 +3,18 @@ export const product = {
 };
 
 export const blog = {
-  CATEGORIES: ["Beauty tips", "Make up", "Skin care", "Body care", "Videos"],
+  CATEGORIES: [
+    "Beauty tips",
+    "Make up",
+    "Skin care",
+    "Body care",
+    "Videos",
+    "美容秘訣",
+    "化妝",
+    "皮膚護理",
+    "身體護理",
+    "視頻",
+  ],
 };
 
 export const shop = {

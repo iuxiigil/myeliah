@@ -59,8 +59,8 @@ export default function IntroductionNine() {
       <div className="container">
         <div className="introduction-nine__content">
           <h3>
-            New items are <br />
-            released weekly.
+            新上市 <br />
+            每週更新
           </h3>
           <Button action="#" color="white" content="ALL NEW ITEMS" />
         </div>

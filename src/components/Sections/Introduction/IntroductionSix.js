@@ -6,7 +6,7 @@ export default function IntroductionSix({ data }) {
   return (
     <div className="introduction-six">
       <div className="container">
-        <SectionTitleOne align="center">What Ingredients?</SectionTitleOne>
+        <SectionTitleOne align="center">有機栽培</SectionTitleOne>
         <div className="introduction-six__wrapper">
           <div className="row">
             {data.map((item, index) => (

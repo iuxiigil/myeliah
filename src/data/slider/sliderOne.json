@@ -1,10 +1,10 @@
 [
   {
-    "title": { "main": "Inner beauty out" },
-    "subTitle": "bringing you",
+    "title": { "main": "內在美自信的展現" },
+    "subTitle": "帶給你",
     "image": "/assets/images/slider/SliderOne/1.png",
     "btn": {
-      "content": "Appointment",
+      "content": "預約",
       "color": "red"
     },
     "animationClass": {
@@ -14,11 +14,11 @@
     }
   },
   {
-    "title": { "main": "You feel good" },
-    "subTitle": "When you look good",
+    "title": { "main": "自信最美" },
+    "subTitle": "相信我！你一定也可以！",
     "image": "/assets/images/slider/SliderOne/2.png",
     "btn": {
-      "content": "Appointment",
+      "content": "預約",
       "color": "red"
     },
     "animationClass": {
@@ -28,11 +28,11 @@
     }
   },
   {
-    "title": { "main": "Beauty salon" },
-    "subTitle": "We make best makeup",
+    "title": { "main": "艷麗彩妝" },
+    "subTitle": "觸動靈魂深處的妳",
     "image": "/assets/images/slider/SliderOne/3.png",
     "btn": {
-      "content": "Appointment",
+      "content": "預約",
       "color": "red"
     },
     "animationClass": {

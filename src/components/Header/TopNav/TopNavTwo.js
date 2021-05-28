@@ -28,9 +28,9 @@ export default function TopNavTwo({ container }) {
             </ul>
           </div>
           <p className="top-nav__wrapper__promo">
-            Free shipping on international orders of $120+
+            {/* Free shipping on international orders of $120+ */}
           </p>
-          <div className="top-nav__wrapper__selectors">
+          {/* <div className="top-nav__wrapper__selectors">
             <Select
               options={["USD", "VND", "YEN"]}
               getValue={(val) => setCurrency(val)}
@@ -40,7 +40,7 @@ export default function TopNavTwo({ container }) {
               options={["ENG", "VI", "JP"]}
               getValue={(val) => setLanguage(val)}
               className="-borderless"
-            />
+            /> */}
             <Link href={process.env.PUBLIC_URL + "#"}>
               <a className="top-nav__auth">Login/Register</a>
             </Link>

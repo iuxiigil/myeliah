@@ -10,6 +10,8 @@ import { Breadcrumb, BreadcrumbItem } from "../../components/Other/Breadcrumb";
 import { getPostByKeyword } from "../../common/postSelect";
 import BlogContent from "../../components/Blog/BlogContent";
 import { myseo } from "../../data/SEO/blog";
+import LeftSiderbarBlog from "./LeftSiderbarBlog";
+import RightSiderbarBlog from "./RightSiderbarBlog";
 
 export default function index() {
   const router = useRouter();
@@ -18,41 +20,15 @@ export default function index() {
   const [offset, setOffset] = useState(0);
   const [currentPage, setCurrentPage] = useState(1);
   const [currentData, setCurrentData] = useState([]);
-  useEffect(() => {
-    if (!search || search.length === 0) {
-      setCurrentData(blogData);
-    } else {
-      setCurrentData(getPostByKeyword(blogData, search));
-    }
-  }, [offset, search]);
 
   return (
     <LayoutFour myseo={myseo}>
-      <Breadcrumb title="Blog">
+      <Breadcrumb>
         <BreadcrumbItem name="Home" />
         <BreadcrumbItem name="Blog" current />
       </Breadcrumb>
-      <div className="blog">
-        <div className="container">
-          <div className="row">
-            <div className="col-12 col-lg-3">
-              <BlogSidebar limit={5} popularPostData={blogData} />
-            </div>
-            <div className="col-12 col-lg-9">
-              <BlogContent offset={offset} search={search} data={currentData} />
-              <Paginator
-                pageContainerClass="paginator"
-                totalRecords={currentData.length}
-                pageLimit={pageLimit}
-                pageNeighbours={2}
-                setOffset={setOffset}
-                currentPage={currentPage}
-                setCurrentPage={setCurrentPage}
-              />
-            </div>
-          </div>
-        </div>
-      </div>
+      <LeftSiderbarBlog offset={offset} search={search} blogData={blogData} />
+      {/* <RightSiderbarBlog offset={offset} search={search} blogData={blogData} /> */}
       <InstagramTwo />
     </LayoutFour>
   );

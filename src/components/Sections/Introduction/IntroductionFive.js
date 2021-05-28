@@ -11,8 +11,8 @@ export default function IntroductionFive() {
       <div className="container">
         <div className="introduction-five__content">
           <h2>
-            New items are <br />
-            released weekly.
+            新上市 <br />
+            每週更新
           </h2>
           <Button
             action={process.env.PUBLIC_URL + "/shop/fullwidth-4col"}

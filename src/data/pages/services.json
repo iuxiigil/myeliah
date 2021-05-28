@@ -1,26 +1,31 @@
 [
   {
-    "title": "Body treatment",
-    "description": "Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis pendisse ultrices gravida. Risus commodo viverra lacus vel facilisis.",
+    "order":1,
+    "title": "身體舒療",
+    "description": "現代人的生活型態與飲食習慣大不同，愈來愈多選擇性與享受，選擇全方位一系列的概念與專業醫療背景，體驗全然不同的服務。",
     "bigImgSrc": "/assets/images/contact/1_1.png",
     "smallImgSrc": "/assets/images/contact/1.png"
   },
   {
-    "title": "Professinal makeup",
-    "description": "Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis pendisse ultrices gravida. Risus commodo viverra lacus vel facilisis.",
+    "order":2,
+    "title": "專業美容",
+    "description": "美容師純熟老練的中式手技，針對您的全身身體按摩放鬆，運用五行能量調合的精油滋潤，感受美容師的巧手在您身上來回游移，所及之處逐漸的卸下重擔、解放疲勞，放鬆、再放鬆，舒服的讓人忍不住沉沉睡去……",
     "bigImgSrc": "/assets/images/contact/2_1.png",
     "smallImgSrc": "/assets/images/contact/2.png"
   },
   {
-    "title": "Maincure & pedicure",
-    "description": "Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis pendisse ultrices gravida. Risus commodo viverra lacus vel facilisis.",
+    "order":3,
+    "title": "美甲修足",
+    "description": "仙人掌舒緩–消毒–去色–修整甲型–火山去污經典足浴–修護指緣淺層角質與兩側硬皮–足底硬皮修護–豆莢滋養去角質–果漾精油排水按摩–野莓深層亮白敷膜＋薰衣草嫩足呵護–熱敷–火山水醒膚收斂–仙人掌活化潤澤–硬甲油–指緣滋養。",
     "bigImgSrc": "/assets/images/contact/3_1.png",
     "smallImgSrc": "/assets/images/contact/3.png"
   },
   {
-    "title": "Hair cut & Coloring",
-    "description": "Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis pendisse ultrices gravida. Risus commodo viverra lacus vel facilisis.",
+    "order":4,
+    "title": "染髮剪燙",
+    "description": "美感來自於個人主觀意識，客制化的服務絕對是您的需求，只要溝通了解自身的髮質頭型整理方式工作型態家人朋友的看法，大部分都可以滿足所有人的需求，歡迎來嘗試",
     "bigImgSrc": "/assets/images/contact/4_1.png",
     "smallImgSrc": "/assets/images/contact/4.png"
   }
+  
 ]

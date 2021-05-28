@@ -53,12 +53,12 @@ export default function IntroductionThree() {
           </div>
           <div className="col-12 col-md-6">
             <div className="introduction-three__content">
-              <h5>About Eliah</h5>
+              <h5>關於自然護膚中心</h5>
               <h3>
-                <span>Natural </span>
-                skin care
+                <span>天然 </span>
+                護膚
                 <br />
-                professional
+                專業
               </h3>
               <div className="more-description">
                 <img
@@ -68,16 +68,10 @@ export default function IntroductionThree() {
                   }
                   alt="Decoration"
                 />
-                <span>
-                  Best treatment for curing stubborn whiteheads. Your skin loves
-                  it
-                </span>
+                <span>治愈頑固粗糙皮膚的最佳治療方法</span>
               </div>
               <p>
-                Dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua. Quis
-                pendisse ultrices gravida. Risus commodo viverra lacus vel
-                facilisis.
+                除了非常適合敏感和乾燥的皮膚，天然護膚品也可以改善油性肌膚和痘痘肌。許多以“祛痘藥”為賣點的傳統護膚品都含有硫酸鹽和其他刺激性化學成分，會使皮膚失去其天然油脂。痘痘本身是由於油脂分泌過多導致毛孔堵塞，然後被細菌感染而產生的。
               </p>
               <Button color="dark" content="Read more" action="#" />
             </div>

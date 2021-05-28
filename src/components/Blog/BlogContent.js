@@ -3,11 +3,12 @@ import PostCardFeatured from "../Post/PostCardFeatured";
 
 export default function BlogContent({ offset, search, data }) {
   const pageLimit = 7;
+  console.log(offset, search, data);
   return (
     <div className="blog-content">
       {search && (
         <h3 className="search-result">
-          Searching for <span>"{search}"</span> keyword
+          <span>搜尋 "{search}" 關鍵字</span>
         </h3>
       )}
       {search

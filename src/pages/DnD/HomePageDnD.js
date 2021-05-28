@@ -344,7 +344,9 @@ class HomePageDnDRedux extends Component {
                                       provided.draggableProps.style
                                     )}
                                   >
-                                    <Card style={{ width: "19rem" }}>
+                                    <Card
+                                      style={{ width: "19rem", height: "60px" }}
+                                    >
                                       <Card.Img variant="top" src={item.src} />
                                       <Card.Body>
                                         <Card.Text>
@@ -410,7 +412,9 @@ class HomePageDnDRedux extends Component {
                                       provided.draggableProps.style
                                     )}
                                   >
-                                    <Card style={{ width: "19rem" }}>
+                                    <Card
+                                      style={{ width: "19rem", height: "90px" }}
+                                    >
                                       <Card.Img variant="top" src={item.src} />
                                       <Card.Body>
                                         <Card.Text>

@@ -16,7 +16,7 @@
     justify-content: space-between;
     &__logo {
       img {
-        @include imgCenter(emCal(16, 40), emCal(16, 115));
+        @include imgCenter(emCal(16, 40), emCal(16, 200));
       }
     }
     .navigator {

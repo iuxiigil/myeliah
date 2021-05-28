@@ -4,9 +4,10 @@ import Button from "../../Control/Button";
 import classNames from "classnames";
 
 export default function ServiceItem(props) {
-  const { bigImgSrc, smallImgSrc, description, order, reverse } = props;
+  const { bigImgSrc, smallImgSrc, description, order, reverse, data } = props;
   const bg1 = useRef(null);
   const bg2 = useRef(null);
+  console.log(data);
   useEffect(() => {
     let parallax1 = new Parallax(bg1.current);
     let parallax2 = new Parallax(bg2.current);
@@ -78,14 +79,9 @@ export default function ServiceItem(props) {
               <div className="services__item__order">
                 {reverse ? <h3>.{order}</h3> : <h3>{order}.</h3>}
               </div>
-              <h2 className="services__item__title">Body treatment</h2>
-              <p className="services__item__description">
-                Dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua. Quis
-                pendisse ultrices gravida. Risus commodo viverra lacus vel
-                facilisis.
-              </p>
-              <ul>
+              <h2 className="services__item__title">{data.title}</h2>
+              <p className="services__item__description">{data.description}</p>
+              {/* <ul>
                 <li>
                   {renderListStyle("Lorem ipsum dolor sit amet, consectetur.")}
                 </li>
@@ -100,7 +96,7 @@ export default function ServiceItem(props) {
                 <li>
                   {renderListStyle("Quis ipsum suspendisse ultrices gravida.")}
                 </li>
-              </ul>
+              </ul> */}
               <Button color="white" action="#" content="Read more" />
             </div>
           </div>

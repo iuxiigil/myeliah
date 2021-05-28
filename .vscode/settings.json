@@ -1,0 +1,9 @@
+{
+    "editor.fontSize": 13,
+    "appService.zipIgnorePattern": [
+        "node_modules{,/**}",
+        ".vscode{,/**}"
+    ],
+    "appService.defaultWebAppToDeploy": "/subscriptions/aed04199-3198-478d-a724-7847844c05b6/resourceGroups/appsvc_linux_centralus/providers/Microsoft.Web/sites/mybpec",
+    "appService.deploySubpath": "."
+}

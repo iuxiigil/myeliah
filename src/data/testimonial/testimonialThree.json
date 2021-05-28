@@ -1,17 +1,32 @@
 [
   {
-    "quote": "Amet consectetur adipiscing elit, eiusmo tempor incidunt labore et  dolore magna aliqua lacus velander set facilisis",
-    "authorName": "Luke Gordon",
-    "liveAt": "New york"
+    "quote": "最好最專業的美容學校---在Bankpro美容學校學習美容有半個多月了，我覺得美容不是一種單一化的手工的東西，它包含了很多皮膚的理論知識。",
+    "authorName": "高祥雲",
+    "liveAt": "台北"
   },
   {
     "quote": "lorem ipsum dolor sit amet, consectet adipiscing elit, eiusmo tempor incidunt",
-    "authorName": "Jack Wishere",
-    "liveAt": "London"
+    "authorName": "林思安",
+    "liveAt": "台中"
   },
   {
     "quote": "Dolore magna aliqua lacus velander set facilisis adipiscing elit, eiusmo tempor incidunt labore et  ",
-    "authorName": "Paul Pogba",
-    "liveAt": "Paris"
+    "authorName": "李姍姍",
+    "liveAt": "高雄"
+  },
+  {
+    "quote": "Amet consectetur adipiscing elit, eiusmo tempor incidunt labore et  dolore magna aliqua lacus velander set facilisis",
+    "authorName": "李絲妧",
+    "liveAt": "桃園"
+  },
+  {
+    "quote": "lorem ipsum dolor sit amet, consectet adipiscing elit, eiusmo tempor incidunt",
+    "authorName": "林珊蒂",
+    "liveAt": "嘉義"
+  },
+  {
+    "quote": "Dolore magna aliqua lacus velander set facilisis adipiscing elit, eiusmo tempor incidunt labore et  ",
+    "authorName": "李特娜",
+    "liveAt": "高雄"
   }
 ]

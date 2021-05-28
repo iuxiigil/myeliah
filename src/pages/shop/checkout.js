@@ -45,7 +45,7 @@ export default function () {
                 <div className="checkout__form">
                   <div className="checkout__form__contact">
                     <div className="checkout__form__contact__title">
-                      <h5 className="checkout-title">Contact information</h5>
+                      <h5 className="checkout-title">聯絡資訊rmation</h5>
                       <p>
                         Already have an account?
                         <Link href={process.env.PUBLIC_URL + "#"}>

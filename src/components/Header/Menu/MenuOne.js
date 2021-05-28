@@ -12,7 +12,7 @@ export default function MenuOne({ container }) {
         <div className="menu__wrapper">
           <Link href="/homepages/homepage1">
             <a className="menu__wrapper__logo">
-              <img src="/assets/images/logo.png" alt="Logo" />
+              <img src="/assets/images/logon.png" alt="Logo" />
             </a>
           </Link>
           <Navigator />

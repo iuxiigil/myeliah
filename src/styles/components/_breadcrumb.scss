@@ -5,11 +5,12 @@
     size: cover;
     repeat: no-repeat;
   }
-  padding: emCal(16, 50) 0;
+  // padding: emCal(16, 50) 0;
+  padding: emCal(16, 10) 0;
   margin-bottom: remCal(20);
-  h2 {
+  h4 {
     @include typo($fsz: emCal(16, 50), $fw: 700);
-    margin-bottom: emCal(50, 20);
+    margin-bottom: emCal(50, 10);
   }
   ul {
     list-style: none;

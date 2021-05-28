@@ -12,6 +12,7 @@ polyfill();
 function* getPostDetailBySlug({ payload }) {
   try {
     const data = yield call(PostRepository.getPostBySlug, payload);
+    console.log(data, payload);
     yield put(getPostDetailBySlugSuccess(data));
   } catch (err) {
     console.log(err);

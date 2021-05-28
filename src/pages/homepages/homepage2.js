@@ -13,7 +13,7 @@ import Benefits from "../../components/Other/Benefits";
 import InstagramOne from "../../components/Sections/Instagram/InstagramOne";
 import { shop } from "../../common/variables";
 
-export default function homepage1() {
+export default function homepage2() {
   return (
     <LayoutTwo title="Homepage 2">
       <SliderTwo className="-style-2" data={sliderData} showDots />

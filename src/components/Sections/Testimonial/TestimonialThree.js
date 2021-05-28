@@ -6,6 +6,7 @@ import { NextArrow, PrevArrow } from "../../Other/SliderArrow";
 export default function TestimonialThree({ data }) {
   const settings = {
     infinite: true,
+    dots: true,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -21,7 +22,7 @@ export default function TestimonialThree({ data }) {
               <div className="testimonial-three__item">
                 <p>
                   <i className="fal fa-quote-left" />
-                  Testimonial
+                  用後心得
                 </p>
                 <h3>{item.quote}</h3>
                 <div className="author-info">

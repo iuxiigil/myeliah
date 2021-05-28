@@ -105,15 +105,15 @@ const MyCalendar = (props) => {
         </div>
         <div>
           <ButtonGroup className="button-shadow">
-            <Button outline color="secondary" onClick={goToDayView}>
+            {/* <Button outline color="secondary" onClick={goToDayView}>
               日
             </Button>
             <Button outline color="secondary" onClick={goToWeekView}>
               週
-            </Button>
-            <Button outline color="secondary" onClick={goToMonthView}>
+            </Button> */}
+            {/* <Button outline color="secondary" onClick={goToMonthView}>
               月
-            </Button>
+            </Button> */}
           </ButtonGroup>
         </div>
         <div>

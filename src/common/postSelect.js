@@ -31,6 +31,8 @@ export const getPostBySlug = (posts, slug) => {
 //get post by keyword
 export const getPostByKeyword = (posts, keyword) => {
   return keyword
-    ? posts.filter((post) => post.title.toLowerCase().includes(keyword))
+    ? posts.filter((post) =>
+        post.title.toLowerCase().includes(keyword.toLowerCase())
+      )
     : posts;
 };

@@ -14,7 +14,7 @@ export default function FooterOne() {
             <Link href={process.env.PUBLIC_URL + "/homepages/homepage1"}>
               <a>
                 <img
-                  src={process.env.PUBLIC_URL + "/assets/images/logo.png"}
+                  src={process.env.PUBLIC_URL + "/assets/images/logon.png"}
                   alt="Logo"
                 />
               </a>
@@ -37,18 +37,18 @@ export default function FooterOne() {
           <div className="row">
             <div className="col-12 col-md-6 col-lg-4">
               <div className="footer__section -info">
-                <h5 className="footer-title">Contact info</h5>
+                <h5 className="footer-title">聯絡資訊</h5>
                 <p>
-                  Address: <span>{footerInfomation.address}</span>
+                  地址: <span>{footerInfomation.address}</span>
                 </p>
                 <p>
-                  Phone: <span>{footerInfomation.phone}</span>
+                  電話: <span>{footerInfomation.phone}</span>
                 </p>
                 <p>
                   Email: <span>{footerInfomation.email}</span>
                 </p>
                 <p>
-                  Opentime: <span>{footerInfomation.open}</span>
+                  營業時間: <span>{footerInfomation.open}</span>
                 </p>
               </div>
             </div>
@@ -56,7 +56,7 @@ export default function FooterOne() {
               <div className="footer__section -links">
                 <div className="row">
                   <div className="col-12 col-sm-6">
-                    <h5 className="footer-title">Account</h5>
+                    <h5 className="footer-title">會員中心</h5>
                     <ul>
                       {footerLinks.accountLinks.map((link, index) => (
                         <li key={index}>
@@ -68,7 +68,7 @@ export default function FooterOne() {
                     </ul>
                   </div>
                   <div className="col-12 col-sm-6">
-                    <h5 className="footer-title">Infomation</h5>
+                    <h5 className="footer-title">其他資訊</h5>
                     <ul>
                       {footerLinks.informationLinks.map((link, index) => (
                         <li key={index}>
@@ -84,11 +84,8 @@ export default function FooterOne() {
             </div>
             <div className="col-12 col-lg-4">
               <div className="footer__section -payment">
-                <h5 className="footer-title">Payment methods</h5>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit
-                  gravida facilisis.{" "}
-                </p>
+                <h5 className="footer-title">付款方式</h5>
+                <p> </p>
                 <div className="payment-methods">
                   <img
                     src={

@@ -1,5 +1,5 @@
 .top-nav {
-  background-color: setShadeColor(dark);
+  background-color: setShadeColor(pink);
   padding: emCal(16, 12) 0;
   @include mq(xl) {
     font-size: 15px;
@@ -24,7 +24,7 @@
       .top-nav__auth {
         @include link(
           $color: #fff,
-          $hvr-color: setShadeColor(light),
+          $hvr-color: setShadeColor(black),
           $fsz: emCal(16, 13)
         );
       }
@@ -45,7 +45,7 @@
               @include link(
                 $fsz: emCal(16, 13),
                 $color: #fff,
-                $hvr-color: setShadeColor(light)
+                $hvr-color: setShadeColor(dark)
               );
             }
             &::after {

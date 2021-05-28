@@ -20,7 +20,7 @@ export default function () {
         <div className="container">
           <div className="row">
             <div className="col-12 col-md-6">
-              <h3 className="contact-title">Contact info</h3>
+              <h3 className="contact-title">聯絡資訊</h3>
               {contactData &&
                 contactData.map((item, index) => (
                   <ContactInfoItem

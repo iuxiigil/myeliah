@@ -16,11 +16,11 @@ export default function TopNavOne({ container }) {
         <div className="top-nav__wrapper">
           <SocialIcons className="-white" />
           <p className="top-nav__wrapper__promo">
-            Free shipping on international orders of $120+
+            {/* Free shipping on international orders of $120+ */}
           </p>
           <div className="top-nav__wrapper__selectors">
-            selec
-            <Select
+            {/* selec */}
+            {/* <Select
               id="cur"
               options={["USD", "VND", "YEN"]}
               getValue={(val) => setCurrency(val)}
@@ -31,7 +31,7 @@ export default function TopNavOne({ container }) {
               options={["EN", "VI", "JP"]}
               getValue={(val) => setLanguage(val)}
               className="-white -borderless"
-            />
+            /> */}
             <Link href={process.env.PUBLIC_URL + "#"}>
               <a className="top-nav__auth">Login/Register</a>
             </Link>
