@@ -14,15 +14,15 @@ let layoutScreen;
 
 export default function MainLayout1(props) {
   let key1, key2;
-  console.log(props);
+
   customerDestination = [];
   const targetSelect = props.Data;
-  console.log(targetSelect);
+
   targetSelect &&
-    targetSelect.map((comp, _key1) => {
-      key1 = { _key1 };
-      DefaultSource.map((item, _key2) => {
-        key2 = { _key2 };
+    targetSelect.map((comp, index) => {
+      key1 = { index };
+      DefaultSource.map((item, index) => {
+        key2 = { index };
 
         if (item.id === comp.id) customerDestination.push(item);
       });
@@ -36,10 +36,10 @@ export default function MainLayout1(props) {
   });
 
   return (
-    <LayoutOne>
+    <LayoutOne myseo={props.myseo}>
       <Breadcrumb>
         <BreadcrumbItem name="Home" />
-        {props.Title !== "首頁" && (
+        {props.Title !== "Home" && (
           <BreadcrumbItem name={props.Title} current />
         )}
       </Breadcrumb>

@@ -54,20 +54,15 @@
 //   );
 // }
 
-import { DefaultDestination } from "../../common/componentsSets/HomepageSets";
+// import { DefaultDestination } from "../../common/componentsSets/HomepageSets";
 
-import { useSelector } from "react-redux";
+// import { useSelector } from "react-redux";
 
 import MainLayout1 from "../homepages/MainLayout1";
+import ResetComponents from "../../common/ResetComponents";
 
-let customerSelect = [];
+// let customerSelect = [];
 
-export default function homepage1() {
-  customerSelect = useSelector((state) =>
-    state.pagesReducer.pagesSelected
-      ? state.pagesReducer.pagesSelected
-      : DefaultDestination
-  );
-
-  return <MainLayout1 Data={customerSelect.About} Title="關於我們" />;
+export default function about() {
+  return <MainLayout1 Data={ResetComponents("About")} Title="關於我們" />;
 }

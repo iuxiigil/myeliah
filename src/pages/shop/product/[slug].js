@@ -10,7 +10,7 @@ import {
   BreadcrumbItem,
 } from "../../../components/Other/Breadcrumb";
 import ProductSlideTwo from "../../../components/Sections/ProductThumb/ProductSlide/ProductSlideTwo";
-
+import { myseo } from "../../../data/SEO/blog";
 export default function () {
   const router = useRouter();
   const { slug } = router.query;
@@ -20,7 +20,7 @@ export default function () {
   };
   return (
     foundProduct !== null && (
-      <LayoutFour title={foundProduct.name}>
+      <LayoutFour title={foundProduct.name} myseo={myseo}>
         <Breadcrumb title="Product Detail">
           <BreadcrumbItem name="Home" />
           <BreadcrumbItem name="Shop" />

@@ -18,18 +18,13 @@
 //     </LayoutFour>
 //   );
 // }
-import { DefaultDestination } from "../../common/componentsSets/HomepageSets";
-import { useSelector } from "react-redux";
+// import { DefaultDestination } from "../../common/componentsSets/HomepageSets";
+// import { useSelector } from "react-redux";
 import MainLayout1 from "../homepages/MainLayout1";
+import ResetComponents from "../../common/ResetComponents";
 
-let customerSelect = [];
+// let customerSelect = [];
 
-export default function homepage1() {
-  customerSelect = useSelector((state) =>
-    state.pagesReducer.pagesSelected
-      ? state.pagesReducer.pagesSelected
-      : DefaultDestination
-  );
-  console.log(customerSelect.Service);
-  return <MainLayout1 Data={customerSelect.Service} Title="服務" />;
+export default function services() {
+  return <MainLayout1 Data={ResetComponents("Service")} Title="服務" />;
 }

@@ -11,11 +11,9 @@ class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
-          {/* <meta
-            name="Description"
-            content="Eliah - React NextJs Beauty Salon & Cosmetic Shop Template"
-          /> */}
+          <meta name="Description" content="金財通商務科技服務股份有限公司" />
           {/* Fonts and icons */}
+          {/* <style>{`* { color: yellow}`}</style> */}
           <link
             rel="stylesheet"
             href="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.css"

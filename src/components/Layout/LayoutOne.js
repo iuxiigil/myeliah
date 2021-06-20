@@ -10,10 +10,10 @@ let ScrollFixedHeader = withScrollFixed(HeaderOne);
 
 export default function LayoutOne(props) {
   // const intl = useIntl();
-
+  console.log(props);
   return (
     <>
-      <Head>
+      <Head myseo={props.myseo}>
         <title>{props.title || multilingual("app.homeTitle")}</title>
       </Head>
       <ScrollFixedHeader container={props.container} />

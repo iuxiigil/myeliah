@@ -57,9 +57,10 @@ const App = ({ Component, pageProps, reduxStore }) => {
           <Component {...pageProps} />
         </AppProvider>
         <ToastContainer position="bottom-left" autoClose={1500} />
+
         <ScrollToTop
           smooth
-          component={<i className="fal fa-arrow-to-top" />}
+          component={<i className="fas fa-check" />}
           style={{
             backgroundColor: "#f7f5f4",
             borderRadius: "999px",

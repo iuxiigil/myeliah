@@ -5,9 +5,9 @@ import AppLocale from "../data/config/translation";
 
 export default function AppProvider({ children }) {
   const { locale } = useSelector((state) => state.LanguageSwitcher.language);
-  console.log(locale);
+  // console.log(locale);
   const currentAppLocale = AppLocale[locale];
-  console.log(currentAppLocale);
+  // console.log(currentAppLocale);
   return (
     <IntlProvider locale={"en"} messages={currentAppLocale.messages}>
       {children}

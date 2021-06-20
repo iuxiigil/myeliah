@@ -8,7 +8,7 @@ export const Breadcrumb = ({ title, children }) => {
   return (
     <div className="breadcrumb">
       <div className="container">
-        <h2>{title}</h2>
+        <h5>{title}</h5>
         <ul>{children}</ul>
       </div>
     </div>

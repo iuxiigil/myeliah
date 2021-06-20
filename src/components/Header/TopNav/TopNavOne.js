@@ -46,7 +46,7 @@ export default function TopNavOne({ container }) {
           </p>
           <div className="top-nav__wrapper__selectors">
             {/* selec */}
-            {/* <Select
+            {/* <Select「ㄧㄜ
               id="cur"
               options={["USD", "VND", "YEN"]}
               getValue={(val) => setCurrency(val)}
