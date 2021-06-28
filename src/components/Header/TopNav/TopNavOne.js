@@ -11,13 +11,13 @@ import actions from "../../../redux/reducers/languageSwitcher/actions";
 
 export default function TopNavOne({ container }) {
   const dispatch = useDispatch();
-  const options = [
-    { id: "1", value: "en", label: "EN" },
-    { id: "2", value: "tw", label: "TW" },
-    { id: "3", value: "cn", label: "CN" },
-    { id: "4", value: "jp", label: "JP" },
-    { id: "5", value: "ke", label: "KE" },
-  ];
+  // const options = [
+  //   { id: "1", value: "en", label: "EN" },
+  //   { id: "2", value: "tw", label: "TW" },
+  //   { id: "3", value: "cn", label: "CN" },
+  //   { id: "4", value: "jp", label: "JP" },
+  //   { id: "5", value: "ke", label: "KE" },
+  // ];
   const styles = {
     fontSize: 11,
     color: "blue",
@@ -34,7 +34,7 @@ export default function TopNavOne({ container }) {
       <div className={renderContainer(container)}>
         <div className="top-nav__wrapper">
           <SocialIcons className="-red" />
-          <p className="top-nav__wrapper__promo">
+          {/* <p className="top-nav__wrapper__promo">
             <Link href={process.env.PUBLIC_URL + "/homepages/homepage1"}>
               <a>
                 <img
@@ -43,10 +43,10 @@ export default function TopNavOne({ container }) {
                 />
               </a>
             </Link>
-          </p>
+          </p> */}
           <div className="top-nav__wrapper__selectors">
             {/* selec */}
-            {/* <Select「ㄧㄜ
+            {/* <Select
               id="cur"
               options={["USD", "VND", "YEN"]}
               getValue={(val) => setCurrency(val)}

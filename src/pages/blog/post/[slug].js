@@ -2,6 +2,7 @@ import { useRouter } from "next/router";
 
 import data from "../../../data/blog/blog.json";
 import LayoutFour from "../../../components/Layout/LayoutFour";
+import LayoutOne from "../../../components/Layout/LayoutOne";
 import { getPostBySlug } from "../../../common/postSelect";
 import BlogSidebar from "../../../components/Blog/BlogSidebar";
 import PostContent from "../../../components/Blog/PostContent";
@@ -27,7 +28,7 @@ export default function () {
 
   return (
     foundPost !== null && (
-      <LayoutFour myseo={myseo1}>
+      <LayoutOne myseo={myseo1}>
         <div className="post">
           <div className="post__cover">
             <img src={foundPost.coverImage} alt={foundPost.title} />
@@ -50,7 +51,7 @@ export default function () {
           </div>
         </div>
         <InstagramTwo />
-      </LayoutFour>
+      </LayoutOne>
     )
   );
 }

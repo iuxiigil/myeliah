@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import Select from "../Control/Select";
 import { shop } from "../../common/variables";
+import Breadcrumbs from "nextjs-breadcrumbs";
 
 export default function ShopHeader({
   curentView,
@@ -14,6 +15,7 @@ export default function ShopHeader({
 
   return (
     <div className="shop-header">
+      <Breadcrumbs useDefaultStyle transformLabel={(title) => title} />
       <div className="shop-header__view">
         <div className="shop-header__view__icon">
           <a
@@ -37,11 +39,9 @@ export default function ShopHeader({
             <i className="fas fa-bars"></i>
           </a>
         </div>
-        {view === "grid" && (
-          <h5 className="shop-header__page">Shop Fullwidth 4 Columns</h5>
-        )}
+        {view === "grid" && <h5 className="shop-header__page"></h5>}
+        <Select options={shop.SORT_TYPES} getValue={getCurrentSort} />
       </div>
-      <Select options={shop.SORT_TYPES} getValue={getCurrentSort} />
     </div>
   );
 }

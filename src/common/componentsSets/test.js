@@ -81,19 +81,19 @@ const imagesData = [
   {
     componentName: "BlogOne",
     DnDId: "1",
-    title: "部落格-1",
+    title: "最新消息-1",
     src: "/images/prototypes/Blog/BlogOne.png",
   },
   {
     componentName: "BlogTwo",
     DnDId: "2",
-    title: "部落格-2",
+    title: "最新消息-2",
     src: "/images/prototypes/Blog/BlogTwo.png",
   },
   {
     componentName: "BlogThree",
     DnDId: "3",
-    title: "部落格-3",
+    title: "最新消息-3",
     src: "/images/prototypes/Blog/BlogThree.png",
   },
   {

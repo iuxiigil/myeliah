@@ -1,6 +1,6 @@
 import { useForm } from "react-hook-form";
 
-import LayoutFour from "../../components/Layout/LayoutFour";
+import LayoutOne from "../../components/Layout/LayoutOne";
 import InstagramTwo from "../../components/Sections/Instagram/InstagramTwo";
 import { Breadcrumb, BreadcrumbItem } from "../../components/Other/Breadcrumb";
 import ContactInfoItem from "../../components/Pages/Contact/ContactInfoItem";
@@ -11,7 +11,7 @@ export default function () {
   const { register, handleSubmit, watch, errors } = useForm();
   const onSubmit = (data) => console.log(data);
   return (
-    <LayoutFour myseo={myseo}>
+    <LayoutOne myseo={myseo}>
       <Breadcrumb title="Contact us">
         <BreadcrumbItem name="Home" />
         <BreadcrumbItem name="Contact us" current />
@@ -32,7 +32,7 @@ export default function () {
                 ))}
             </div>
             <div className="col-12 col-md-6">
-              <h3 className="contact-title">Get in touch</h3>
+              <h3 className="contact-title">保持聯繫</h3>
               <div className="contact-form">
                 <form onSubmit={handleSubmit(onSubmit)}>
                   <div className="input-validator">
@@ -43,7 +43,7 @@ export default function () {
                       ref={register({ required: true })}
                     />
                     {errors.name && (
-                      <span className="input-error">Please provide a name</span>
+                      <span className="input-error">請提供姓名</span>
                     )}
                   </div>
                   <div className="input-validator">
@@ -54,9 +54,7 @@ export default function () {
                       ref={register({ required: true })}
                     />
                     {errors.email && (
-                      <span className="input-error">
-                        Please provide an email
-                      </span>
+                      <span className="input-error">請提供 email</span>
                     )}
                   </div>
                   <div className="input-validator">
@@ -68,7 +66,7 @@ export default function () {
                       placeholder="Message"
                     />
                   </div>
-                  <button className="btn -dark">SEND MESSAGE</button>
+                  <button className="btn -dark"> 發送</button>
                 </form>
               </div>
             </div>
@@ -86,6 +84,6 @@ export default function () {
         </div>
       </div>
       <InstagramTwo />
-    </LayoutFour>
+    </LayoutOne>
   );
 }

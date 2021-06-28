@@ -84,7 +84,7 @@ export default function MenuFunctionIcons(props) {
                 <span className="cart__quantity">{cartState.length}</span>
               </a>
               <h5>
-                Cart: <span>{formatCurrency(calcalateTotal(cartState))}</span>
+                <span>{formatCurrency(calcalateTotal(cartState))}</span>
               </h5>
             </div>
             <a
@@ -106,6 +106,7 @@ export default function MenuFunctionIcons(props) {
       <SearchBox showSearch={showSearch} setShowSearch={setShowSearch} />
       {/* Cart sidebar */}
       <CartItemsSidebar showCart={showCart} setShowCart={setShowCart} />
+
       {/* Mobile navigation sidebar */}
       <MobileNavSidebar
         showMobileNav={showMobileNav}

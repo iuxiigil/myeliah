@@ -7,7 +7,7 @@ function* loadFromDB(MyData) {
   try {
     let obj = MyData.payload;
     let data = yield call(commonRepository.getDataList, obj);
-    console.log(obj, data);
+    // console.log(obj, data);
     yield put(actions.loadlistSuccess(data));
   } catch (error) {
     console.log(error);
@@ -17,7 +17,7 @@ function* loadFromDB(MyData) {
 
 //傳page進來->刪除一筆->取回前10筆
 function* crudToDB(payload) {
-  console.log(payload);
+  // console.log(payload);
   try {
     yield call(commonRepository.getDataList, payload.payload);
     yield loadFromDB(payload);

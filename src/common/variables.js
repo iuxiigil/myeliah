@@ -22,11 +22,11 @@ export const shop = {
   BRANDS: ["gucci", "dolce", "h&m", "kenzo", "prada"],
   PRICE_POINTS: [0, 25, 50, 75, 100],
   SORT_TYPES: [
-    { name: "Default", value: "default" },
-    { name: "A to Z Sorting", value: "az" },
-    { name: "Z to A Sorting", value: "za" },
-    { name: "Low to High Price Sorting", value: "lowToHigh" },
-    { name: "High to Low Price Sorting", value: "highToLow" },
+    { name: "預設", value: "default" },
+    { name: "A to Z 排序", value: "az" },
+    { name: "Z to A 排序", value: "za" },
+    { name: "價格由低到高", value: "lowToHigh" },
+    { name: "價格由高到低", value: "highToLow" },
   ],
   DEFAULT_VIEW: "grid",
   DNDCATEGORY: [

@@ -157,7 +157,7 @@ export const DefaultSource = [
     componentName: "BlogOne",
     id: "1",
     key: "1",
-    remark: "部落格-1",
+    remark: "最新消息-1",
     src: "/assets/images/prototypes/Blog/BlogOne.png",
   },
   {
@@ -166,7 +166,7 @@ export const DefaultSource = [
     componentName: "BlogTwo",
     id: "2",
     key: "2",
-    remark: "部落格-2",
+    remark: "最新消息-2",
     src: "/assets/images/prototypes/Blog/BlogTwo.png",
   },
   {
@@ -175,7 +175,7 @@ export const DefaultSource = [
     componentName: "BlogThree",
     id: "3",
     key: "3",
-    remark: "部落格-3",
+    remark: "最新消息-3",
     src: "/assets/images/prototypes/Blog/BlogThree.png",
   },
   {

@@ -24,7 +24,8 @@ import MainLayout1 from "../homepages/MainLayout1";
 import ResetComponents from "../../common/ResetComponents";
 
 // let customerSelect = [];
+import { myseo } from "../../data/SEO/service";
 
 export default function services() {
-  return <MainLayout1 Data={ResetComponents("Service")} Title="服務" />;
+  return <MainLayout1 Data={ResetComponents("Service")} myseo={myseo} />;
 }

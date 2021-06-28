@@ -1,0 +1,46 @@
+[
+  {
+    "title": "menu.Home",
+    "to": "/homepages/homepage1",
+    "subMenu": [
+      { "title": "menu.Home1", "to": "/homepages/homepage1" },
+      { "title": "menu.Home2", "to": "/homepages/homepage2" },
+      { "title": "menu.Home3", "to": "/homepages/homepage3" },
+      { "title": "menu.Home4", "to": "/homepages/homepage4" },
+      { "title": "menu.Home5", "to": "/homepages/homepage5" },
+      { "title": "menu.Home6", "to": "/homepages/homepage6" }
+    ]
+  },
+  { "title": "menu.Service", "to": "/other/services" },
+  { "title": "menu.About", "to": "/other/about" },
+  {
+    "title": "menu.shop",
+    "to": "/shop/index",
+
+    "subMenu": [
+      { "title": "menu.full-4", "to": "/shop/fullwidth-4col" },
+      { "title": "menu.full-5", "to": "/shop/fullwidth-5col" },
+      {
+        "title": "menu.full-left",
+        "to": "/shop/index"
+      },
+      {
+        "title": "menu.full-right",
+        "to": "/shop/fullwidth-right-sidebar"
+      },
+      { "title": "menu.Grid-4", "to": "/shop/grid-4col" },
+      { "title": "menu.Grid-3", "to": "/shop/grid-3col" },
+      { "title": "menu.Grid-left", "to": "/shop/grid-sidebar" },
+      { "title": "menu.Grid-left-category", "to": "/shop/list-sidebar" },
+      {
+        "title": "menu.Productdetail",
+        "to": "#"
+      },
+      { "title": "menu.Cart", "to": "/shop/cart" },
+      { "title": "menu.Checkout", "to": "/shop/checkout" },
+      { "title": "menu.Wisher", "to": "/shop/wishlist" }
+    ]
+  },
+  { "title": "menu.Blog", "to": "/blog" },
+  { "title": "menu.Contact", "to": "/other/contact" }
+]

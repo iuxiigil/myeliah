@@ -61,6 +61,7 @@
 import MainLayout1 from "../../../homepages/MainLayout1";
 import ResetComponents from "../../../../common/ResetComponents";
 import { useRouter } from "next/router";
+import { myseo } from "../../../../data/SEO/about";
 
 // let customerSelect = [];
 
@@ -68,5 +69,6 @@ export default function about() {
   const router = useRouter();
   const { slug } = router.query;
   console.log(slug);
-  return <MainLayout1 Data={ResetComponents("About")} Title="關於我們" />;
+
+  return <MainLayout1 Data={ResetComponents("About")} myseo={myseo} />;
 }

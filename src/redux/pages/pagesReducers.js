@@ -24,7 +24,7 @@ export default function pagesReducer(state = initState, { type, payload }) {
         modalActive: false,
       };
     case actions.LOAD_LIST_SUCCESS:
-      console.log(payload.data);
+      // console.log(payload.data);
       return {
         ...state,
         isLoading: false,

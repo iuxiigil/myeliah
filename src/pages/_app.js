@@ -9,6 +9,7 @@ import "../styles/styles.scss";
 import Loading from "../components/Other/Loading";
 import withReduxStore from "../common/with-redux-store";
 import AppProvider from "./AppProvider";
+import "nextjs-breadcrumbs/dist/index.css";
 
 // import "assets/css/nextjs-material-dashboard.css?v=1.0.0";
 /*
@@ -60,7 +61,7 @@ const App = ({ Component, pageProps, reduxStore }) => {
 
         <ScrollToTop
           smooth
-          component={<i className="fas fa-check" />}
+          component={<i className="fas fa-angle-double-up" />}
           style={{
             backgroundColor: "#f7f5f4",
             borderRadius: "999px",

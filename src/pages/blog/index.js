@@ -4,6 +4,7 @@ import { useRouter } from "next/router";
 
 import BlogSidebar from "../../components/Blog/BlogSidebar";
 import LayoutFour from "../../components/Layout/LayoutFour";
+import LayoutOne from "../../components/Layout/LayoutOne";
 import InstagramTwo from "../../components/Sections/Instagram/InstagramTwo";
 import blogData from "../../data/blog/blog.json";
 import { Breadcrumb, BreadcrumbItem } from "../../components/Other/Breadcrumb";
@@ -22,7 +23,7 @@ export default function index() {
   const [currentData, setCurrentData] = useState([]);
 
   return (
-    <LayoutFour myseo={myseo}>
+    <LayoutOne myseo={myseo}>
       <Breadcrumb>
         <BreadcrumbItem name="Home" />
         <BreadcrumbItem name="Blog" current />
@@ -30,6 +31,6 @@ export default function index() {
       <LeftSiderbarBlog offset={offset} search={search} blogData={blogData} />
       {/* <RightSiderbarBlog offset={offset} search={search} blogData={blogData} /> */}
       <InstagramTwo />
-    </LayoutFour>
+    </LayoutOne>
   );
 }

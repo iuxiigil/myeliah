@@ -57,6 +57,7 @@
 // import { DefaultDestination } from "../../common/componentsSets/HomepageSets";
 
 // import { useSelector } from "react-redux";
+import { myseo } from "../../data/SEO/about";
 
 import MainLayout1 from "../homepages/MainLayout1";
 import ResetComponents from "../../common/ResetComponents";
@@ -64,5 +65,5 @@ import ResetComponents from "../../common/ResetComponents";
 // let customerSelect = [];
 
 export default function about() {
-  return <MainLayout1 Data={ResetComponents("About")} Title="關於我們" />;
+  return <MainLayout1 Data={ResetComponents("About")} myseo={myseo} />;
 }

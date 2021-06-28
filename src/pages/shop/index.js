@@ -2,9 +2,12 @@ import { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import Paginator from "react-hooks-paginator";
 
-import { Breadcrumb, BreadcrumbItem } from "../../components/Other/Breadcrumb";
+// import { Breadcrumb, BreadcrumbItem } from "../../components/Other/Breadcrumb";
+import Breadcrumbs from "nextjs-breadcrumbs";
+
 import { getProductbyFilter } from "../../common/productSelect";
 import LayoutFour from "../../components/Layout/LayoutFour";
+import LayoutOne from "../../components/Layout/LayoutOne";
 import productData from "../../data/products.json";
 import ShopProducts from "../../components/Shop/ShopProducts";
 import ShopHeader from "../../components/Shop/ShopHeader";
@@ -43,11 +46,7 @@ export default function () {
     setCurrentData(sortedProduct);
   }, [offset, currentSort, filterData]);
   return (
-    <LayoutFour myseo={myseo1} container="wide">
-      <Breadcrumb title="Shop">
-        <BreadcrumbItem name="Home" />
-        <BreadcrumbItem name="Shop" current />
-      </Breadcrumb>
+    <LayoutOne myseo={myseo1}>
       <div className="shop -five-col">
         <div className="container-full-half">
           <div className="row">
@@ -65,8 +64,8 @@ export default function () {
               ) : (
                 <>
                   <ShopProducts
-                    gridColClass="col-12 col-sm-6 col-lg-4 col-xl-3"
-                    listColClass="col-12 col-xl-6"
+                    gridColClass="col-6 col-sm-6 col-lg-4 col-xl-2"
+                    listColClass="col-12 "
                     view={currentView}
                     data={currentData.slice(offset, offset + pageLimit)}
                   />
@@ -87,6 +86,6 @@ export default function () {
         </div>
       </div>
       <InstagramTwo />
-    </LayoutFour>
+    </LayoutOne>
   );
 }

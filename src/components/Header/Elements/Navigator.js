@@ -13,12 +13,12 @@ export default function Navigator({ disableSubmenu, className }) {
             <Link href={process.env.PUBLIC_URL + item.to}>
               <a>
                 {multilingual(item.title)}
-                <span className="dropable-icon">
+                {/* <span className="dropable-icon">
                   <i className="fas fa-angle-down"></i>
-                </span>
+                </span> */}
               </a>
             </Link>
-            <ul className="dropdown-menu">
+            {/* <ul className="dropdown-menu">
               {item.subMenu.map((i, index) => (
                 <li key={index}>
                   <Link href={i.to}>
@@ -26,7 +26,7 @@ export default function Navigator({ disableSubmenu, className }) {
                   </Link>
                 </li>
               ))}
-            </ul>
+            </ul> */}
           </li>
         );
       }
@@ -53,7 +53,7 @@ export default function Navigator({ disableSubmenu, className }) {
           </li>
         );
       }
-      if (item.title === "menu.Shop") {
+      if (item.title === "menu.Categories") {
         return (
           <li key={index}>
             <Link href={process.env.PUBLIC_URL + item.to}>

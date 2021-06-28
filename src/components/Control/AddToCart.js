@@ -1,5 +1,6 @@
 import Button from "./Button";
 import classNames from "classnames";
+import multilingual from "../../common/multilingual";
 
 export default function AddToCart({ onClick, className }) {
   return (
@@ -13,7 +14,7 @@ export default function AddToCart({ onClick, className }) {
         content={<i className="fas fa-shopping-bag"></i>}
       />
 
-      <h5>加入購物車</h5>
+      <h5>{multilingual("product.addtocart")}</h5>
     </div>
   );
 }

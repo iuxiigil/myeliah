@@ -8,6 +8,7 @@ export default function ShopProducts(props) {
   for (var i = 0; i < Math.round(data.length / 5); i++) {
     arr.push(arr[i] + 6);
   }
+  // console.log(arr, fiveCol);
   return (
     <div className="shop-products">
       {view === "grid" ? (
