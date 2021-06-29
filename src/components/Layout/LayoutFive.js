@@ -10,7 +10,7 @@ export default function LayoutFive(props) {
   return (
     <>
       <Head>
-        <title>{props.title || "Eliah | React"}</title>
+        <title>{props.title || "nitori | React"}</title>
       </Head>
       <ScrollFixedHeader container={props.container} />
       {props.children}
